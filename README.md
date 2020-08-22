@@ -2,7 +2,7 @@
 
 ## 3D Wave Load and Hydroelasticity Analysis Software
 
-* Example 1: my own homepage, http://hongmengship.github.io
+* My own homepage, http://hongmengship.github.io
 
 ## Get Started
 
