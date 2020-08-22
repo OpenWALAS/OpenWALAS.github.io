@@ -2,7 +2,7 @@
 
 ## 3D Wave Load and Hydroelasticity Analysis Software
 
-* My own homepage, http://hongmengship.github.io
+* My own homepage, http://openWALAS.github.io
 
 ## Get Started
 
