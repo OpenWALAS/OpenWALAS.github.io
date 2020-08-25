@@ -2,7 +2,7 @@
 layout: defaults/page
 permalink: index.html
 narrow: true
-title: Welcome to openWALAS
+title: Welcome to Friday Theme
 ---
 
 ## What is it?

@@ -7,13 +7,13 @@ highlighter:      rouge
 excerpt_separator: <!--more-->
 
 # Config for your profile.
-title:            openWALAS            # Site title
-name:             Peng Yang            # Your name
+title:            Friday Theme            # Site title
+name:             Friday Theme            # Your name
 avatar:           /theme/img/avatar.jpg   # Path to an avatar image
 
 # The theme uses the baseurl throughout, which is useful for running the entire
 # site under a subdir, like for this GitHub Pages deployment as a project site.
-baseurl: "/openWALAS"
+baseurl: "/friday-theme"
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
 include: ["_pages", "_portfolio"]
