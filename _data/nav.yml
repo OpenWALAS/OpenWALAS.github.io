@@ -1,13 +1,12 @@
-- title: Home
+- title: Download
   href: index.html
-
-- title: About
+- title: Development
   href: about.html
-
-- title: Posts
+- title: Blog
   href: list/posts.html
-
 - title: Documentation
+  href: list/projects.html
+- title: Donate
   href: list/projects.html
 
 
