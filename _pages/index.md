@@ -18,13 +18,13 @@ This web site is the executable program and documentation for openWALAS and also
 ### (a) Installation
 
 - Designed for Linux, Windows and macOS operation system.
-- -Windows: direct double click 'openWALAS.msi' to install the software.
+- -Windows: direct double click ['openWALAS.msi' ](bin/openWALAS2020_X86_64bits.msi) to install the software.
 - -Linux: direct double click 'openWALAS.deb' to install the software or compile from the source files.
 - -macOS: direct double click 'openWALAS.DWG' to install the software.
 
 ### (b) Documents
 
-[The documentation](doc/openWALAS V1.0 User Manual.pdf ) covers the basics of installing and using it, and is an example of how you could write documentation about your own projects.
+[The documentation](doc/openWALAS V1.0 User Manual.pdf ) covers the basics of installing and using it.
 
 ### (c) Examples
 
