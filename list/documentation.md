@@ -1,10 +1,12 @@
 ---
-title: Documentation
-narrow: true
+layout: defaults/page
 permalink: list/documentation.html
+narrow: true
+title: Documentation
 show_profile: true
 ---
 
-{% for project in site.projects %}
-- [{{ project.title }}]({{ site.baseurl }}{{ project.url }})
-{% endfor %}
+## Get the document
+
+-  [Documents](https://github.com/openWALAS/openWALAS.github.io/tree/master/doc)
+
