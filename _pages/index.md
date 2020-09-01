@@ -27,7 +27,7 @@ The software suit contains the GUI program openWALAS and five non-GUI core progr
 
 This web site is the executable program and documentation for openWALAS and also provides examples of how you can use it.
 
-### Two ways for running
+### - Two ways for running
 
   （一）  方式一：运行openWALAS界面完成输入参数设置、计算和后处理绘图，在界面中完成一切操作。
 
@@ -37,18 +37,18 @@ This web site is the executable program and documentation for openWALAS and also
     (2)  三维间接时域模块：openWALAS_PRE-> openWALAS_FSCM -> openWALAS_TIME_RESP。
     (3)  三维直接时域模块：openWALAS_PRE -> openWALAS_TDGF or openWALAS_IORM -> openWALAS_ TIME_RESP。
 
-### Installation
+### - Installation
 
 - Designed for Linux, Windows and macOS operation system.
 - -Windows: direct double click ['openWALAS.msi' ](bin/openWALAS2020_X86_64bits.msi) to install the software.
 - -Linux: direct double click 'openWALAS.deb' to install the software or compile from the source files.
 - -macOS: direct double click 'openWALAS.DWG' to install the software.
 
-### Documents
+### - Documents
 
 [The documentation](doc/openWALAS V1.0 User Manual.pdf ) covers the basics of installing and using it.
 
-### Examples
+### - Examples
 
 Here's some [examples](example) .
 
