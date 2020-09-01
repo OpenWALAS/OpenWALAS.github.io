@@ -50,7 +50,7 @@ This web site is the executable program and documentation for openWALAS and also
 
 ### Examples
 
-Here's some quick examples of what it can do.
+Here's some [examples](example) .
 
 ## Licensing & Copyright
 
