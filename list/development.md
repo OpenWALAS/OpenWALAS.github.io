@@ -12,8 +12,8 @@ You can download the [source files](https://github.com/openWALAS/openWALAS.githu
 
 ## Compiling environments
 
-  -  Suggested program platform
-    -  [Eclipse](https://www.eclipse.org/downloads/) +  [GCC](http://gcc.gnu.org/) for the non-GUI of openWALAS.
+  - Suggested program platform
+    - [Eclipse](https://www.eclipse.org/downloads/) +  [GCC](http://gcc.gnu.org/) for the non-GUI of openWALAS.
     - [Qt Creator](https://www.qt.io/product/development-tools) for the GUI of openWALAS.
   - GCC (or  [MinGW](http://www.mingw.org/) on Windows) or the other C/C++ compiler
   - Dependent libraries of openWALAS: [gsl](http://www.gnu.org/software/gsl/), [Qt](https://www.qt.io/), [Qwt](Qwt), [openCV](https://opencv.org/)
