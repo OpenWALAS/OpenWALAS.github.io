@@ -1,12 +1,12 @@
 - title: Download
   href: index.html
 - title: Development
-  href: about.html
+  href: list/development.html
 - title: Blog
   href: list/posts.html
 - title: Documentation
-  href: list/projects.html
+  href: list/documentation.html
 - title: Donate
-  href: list/projects.html
+  href: list/donate.html
 
 
