@@ -1,0 +1,19 @@
+PROGRAM = WALET_IORM_CTL_FREE
+all: $(PROGRAM)
+CC = gcc-8
+CFLAGS = -fopenmp  \
+		 -W -Wall -Wno-unused-result -Wno-sign-compare -Wno-empty-body\
+		 -O3 -DHAVE_INLINE
+INCPATH = -I"/usr/local/include"
+LIBS = -L"/usr/local/lib" -lm
+
+#
+$(PROGRAM): main.o
+	$(CC) $(CFLAGS) $(INCPATH) -o $(PROGRAM) main.o $(LIBS)
+	-rm main.o
+main.o: main.c
+	$(CC) $(CFLAGS) $(INCPATH) -c main.c
+#clean
+clean:
+	-rm $(PROGRAM)
+
