@@ -50,7 +50,7 @@ This web site is the executable program and documentation for openWALAS and also
 
 ### - Examples
 
-Here's some [examples](https://openWALAS.github.io/example) .
+Here's some [examples](https://github.com/openWALAS/openWALAS.github.io/tree/master/example) .
 
 ## Licensing & Copyright
 
