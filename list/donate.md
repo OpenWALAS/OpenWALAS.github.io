@@ -9,7 +9,11 @@ show_profile: true
 # Get the document
 
 - If you use and value openWALAS, please consider a donation to help us improve the library.
-- [Donate](https://github.com/openWALAS/openWALAS.github.io/tree/master/doc)
+- Donate:
+  - Alipay
+  - Wet
+  - Bank (Visa, Master, Union)
+  - Paypal
 
 ![main-UI](picture/main-UI.png)
 
