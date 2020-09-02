@@ -5,7 +5,7 @@ narrow: true
 title: Welcome to OpenWALAS
 ---
 
-网站访问量统计：{% include head.html %}
+网站访问量统计：{% include baidu-analysis.html %}
 
 ## What is it?
 
