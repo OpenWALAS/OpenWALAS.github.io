@@ -7,6 +7,8 @@ title: Welcome to OpenWALAS
 
 网站访问量统计：{% include baidu-analysis.html %}
 
+{% include busuanzi_statistics.html %}
+
 ## What is it?
 
 ![main-UI](picture\main-UI.png)
