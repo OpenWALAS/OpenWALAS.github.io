@@ -34,3 +34,5 @@ You can download the [source files](https://github.com/OpenWALAS/OpenWALAS.githu
 
 ## Enjoy it!
 
+<!--//添加评论系统 gitalk-->
+{% include gitalk.html %}
