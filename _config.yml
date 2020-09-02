@@ -69,5 +69,3 @@ defaults:
     values:
       show_profile: false
       layout: defaults/list
-
-
