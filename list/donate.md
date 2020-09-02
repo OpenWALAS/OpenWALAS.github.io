@@ -6,9 +6,9 @@ title: Donate
 show_profile: true
 ---
 
-# Get the document
+# Get the donate
 
-- If you use and value ***OpenWALAS***, please consider a donation to help us improve the library.
+- If you use and value ***OpenWALAS***, please consider a donation to help us improve the software.
 - Donate:
   - Alipay
   - WeChat Pay
