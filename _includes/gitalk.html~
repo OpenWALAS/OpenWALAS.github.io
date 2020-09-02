@@ -8,10 +8,10 @@
   var gitalk = new Gitalk({
       clientID: 'a9430946ad5d24508c42',
       clientSecret: '60578fb5df3676033e4a193eff90d824c4223bc4',
-      repo: 'OpenWALAS',
+      repo: 'blog-comments',
       owner: 'OpenWALAS',
       admin: ['OpenWALAS'],
-      id: md5(location.pathname),
+      id: title,//md5(location.pathname)
       distractionFreeMode: true
   });
   gitalk.render('gitalk-container');
