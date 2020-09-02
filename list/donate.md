@@ -8,7 +8,7 @@ show_profile: true
 
 # Get the donation
 
-- If you use and value ***OpenWALAS***, please consider a donation to help us improve the software.
+- If you use and value ***OpenWALAS***, please consider a donation to help us improve the software. And the projects  very appreciate your donation.
 - Donate:
   - Alipay
   - WeChat Pay
@@ -22,3 +22,6 @@ show_profile: true
 ![bank](../picture/bank.jpg)
 
 ![Palpay](../picture/palpay.jpg)
+
+- If you have any questions, please Email to the projects, we will be very glad to communicate with you.
+- The Donation list is as follows.
