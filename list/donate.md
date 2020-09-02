@@ -8,7 +8,7 @@ show_profile: true
 
 # Get the document
 
-- If you use and value openWALAS, please consider a donation to help us improve the library.
+- If you use and value ***OpenWALAS***, please consider a donation to help us improve the library.
 - Donate:
   - Alipay
   - WeChat Pay

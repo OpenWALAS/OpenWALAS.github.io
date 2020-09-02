@@ -8,5 +8,5 @@ show_profile: true
 
 ## Get the document
 
--  [Documents](https://github.com/openWALAS/openWALAS.github.io/tree/master/doc)
+-  [Documents](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc)
 
