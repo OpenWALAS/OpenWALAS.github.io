@@ -1,10 +1,8 @@
 <!-- Link Gitalk 的支持文件  -->
 <link rel="stylesheet" href="../theme/css/gitalk.css">
+
 <script src="../theme/js/gitalk.min.js"></script> 
 <div id="gitalk-container"></div>
-
-<div id="gitalk-container"></div>
-<script type="text/javascript">
   var title = location.pathname.substr(0, 50);//截取路径的前50个字符作为标识符
   var gitalk = new Gitalk({
       clientID: 'a9430946ad5d24508c42',
