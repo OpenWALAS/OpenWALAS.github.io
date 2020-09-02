@@ -6,6 +6,8 @@ show_profile: true
 layout: defaults/page
 ---
 
+{% include baidu-analysis.html %}
+
 ## How to develop?
 
 You can download the [source files](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/src) simply. If you want, you could modify the codes. Furthermore, compile and run them freely.

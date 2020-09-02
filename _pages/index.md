@@ -5,7 +5,7 @@ narrow: true
 title: Welcome to OpenWALAS
 ---
 
-Website visit statistics: {% include baidu-analysis.html %}
+{% include baidu-analysis.html %}
 
 {% include busuanzi_statistics.html %}
 

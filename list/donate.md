@@ -6,6 +6,8 @@ title: Donate
 show_profile: true
 ---
 
+{% include baidu-analysis.html %}
+
 # Get the donation
 
 - If you use and value ***OpenWALAS***, please consider a donation to help us improve the software. And the projects  very appreciate your donation.

@@ -6,6 +6,8 @@ title: Documentation
 show_profile: true
 ---
 
+{% include baidu-analysis.html %}
+
 ## Get the document
 
 -  [Documents](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc)
