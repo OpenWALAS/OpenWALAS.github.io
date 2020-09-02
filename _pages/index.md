@@ -5,6 +5,8 @@ narrow: true
 title: Welcome to OpenWALAS
 ---
 
+{% include baidu-analysis.html %}
+
 ## What is it?
 
 ![main-UI](picture\main-UI.png)
@@ -93,5 +95,4 @@ OpenWALAS is distributed under the terms of the [GNU General Public License](htt
 - [7] Yang P, Li JR, Wu DW, Zhang W. 2020. Irregular Frequency Elimination of Three-Dimensional Hydroelasticity in Frequency Domain. Ocean Engineering, 196.
 
 <hr />
-
 

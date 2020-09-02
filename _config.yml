@@ -1,6 +1,8 @@
 # Outputting
 permalink: /:categories/:year/:month/:day/:title.html
 
+baidu-analysis: f4fa6ebad16e27858a99d2eef460410d
+
 # Conversion
 markdown:         kramdown
 highlighter:      rouge
