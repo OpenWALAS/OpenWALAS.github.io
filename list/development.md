@@ -12,15 +12,15 @@ You can download the [source files](https://github.com/OpenWALAS/OpenWALAS.githu
 
 ## Compiling environments
 
-  - Suggested program platform
+  - Suggested programming platforms
     - [Eclipse](https://www.eclipse.org/downloads/) +  [GCC](http://gcc.gnu.org/) for the non-GUI of OpenWALAS.
     - [Qt Creator](https://www.qt.io/product/development-tools) for the GUI of OpenWALAS.
-  - GCC (or  [MinGW](http://www.mingw.org/) on Windows) or the other C/C++ compiler
+  - GCC (or  [MinGW](http://www.mingw.org/) on Windows) or the other C/C++ compilers
   - Dependent libraries of OpenWALAS: [gsl](http://www.gnu.org/software/gsl/), [Qt](https://www.qt.io/), [Qwt](Qwt), [openCV](https://opencv.org/)
     - non-GUI codes only depend on gsl.
-    - GUI program depend on gsl, Qt, Qwt, openCV.
+    - GUI program depends on gsl, Qt, Qwt, openCV.
   - Support openMP (parallels on thread level)
-    - Compile option '-fopenmp'
+    - Compiling option '-fopenmp'
 
 ## Develop form
 
