@@ -7,6 +7,11 @@ title: Welcome to OpenWALAS
 
 {% include baidu-analysis.html %}
 
+<head>
+  <meta name="baidu-site-verification" content="Ivf7ppggHc" />
+  <title>My title</title>
+</head>
+
 {% include busuanzi_statistics.html %}
 
 ## What is it?
