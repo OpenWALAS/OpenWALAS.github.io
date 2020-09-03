@@ -25,5 +25,5 @@ show_profile: true
 
 ![Palpay](../picture/palpay.jpg)
 
-- If you have any questions, please Email to the projects, we will be very glad to communicate with you.
+- If you have any questions, please email to the project group, we will be very glad to communicate with you.
 - The donation list is as follows.
