@@ -24,11 +24,11 @@ OpenWALAS program suit  contains the functions of automatic meshing of ship hull
 
 ## How to use it
 
-This web site is the executable programs and documentations for OpenWALAS and also provides examples of how you can use it.
+This web site supplies the [*executable programs* ](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin) and [*documentations*](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc) of OpenWALAS and also provides [examples](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/example) of how you can use it.
 
 ### - Two ways for running
 
-- First way: run OpenWALAS wit GUI to input parameters, calculate and post-processing, as well as everything else.
+- First way: run OpenWALAS wit GUI to input parameters, calculate and post-process, as well as everything else.
 
 - Second way: command line
 
