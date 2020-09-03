@@ -24,11 +24,11 @@ You can download the [source files](https://github.com/OpenWALAS/OpenWALAS.githu
   - Support openMP (parallels on thread level)
     - Compiling option '-fopenmp'
 
-## Develop form
+## Develop forms
 
 - The communication group will be established in the later stage.
 
-- In the present stage, the developers could Email (pycssrc@qq.com) to the projects.
+- In the present stage, the developers could email (pycssrc@qq.com) to the project group.
 
 - The project team is very welcome to exchange views.
 
