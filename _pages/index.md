@@ -70,18 +70,23 @@ OpenWALAS is distributed under the terms of the [GNU General Public License](htt
 
 - The bottom line for commercial users:
 
-  -  *OpenWALAS can be used internally ("in-house") without restriction, but only redistributed in other software that is under the GNU GPL*.
+  - *OpenWALAS can be used internally ('in-house') without restriction, but only redistributed in other software that is under the GNU GPL*.
+
+The author always respects the intellectual property rights and labor achievements, and supports the behavior of sharing software and related documents. Any organization and individual can freely share the program and related documents within a limited scope, but the following principles should be followed.
+
+- (a) The projects encourage relevant researchers and authors to carry out joint-research, utilize this program, and further improve the program, so as to contribute to the technology development of global ship and ocean engineering;
+- (b) Copyrights of the software and documents belongs to the original author;
+- (c) This program shall not be used for any commercial purpose without the permission of the original author, otherwise it will be deemed as infringement;
+- (d) The source and the original author must be cited, if the software and the contents of this document are reprinted;
+- (e) For those who do not abide by this statement or illegally use this software and the contents of this document, the rights are reserved according to law.
 
 作者一贯尊重知识产权和劳动成果，并支持分享软件和相关文档的行为，在有限范围内可自由分享本程序和相关文档，但需遵循以下原则：
 
-- *1、程序和文档的版权归原作者所有；*
-
-- *2、未经原作者允许不得将本程序用于**任何商业目的**，否则将视为侵权；*
-
-- *3、转载或者引用本程序和本文内容请**注明来源及原作者**；*
-- *4、对于不遵守此声明或者其他违法使用本程序和本文内容者，本人依法保留追究权等；*
-
-- *5、鼓励相关科研人员与作者开展联合研究，发挥本程序作用，并进一步完善程序。*
+- *1、鼓励相关科研人员与作者开展联合研究，发挥本程序作用，并进一步完善程序，为全球船舶与海洋工程技术发展做贡献;*
+- *2、程序和文档的版权归原作者所有；*
+- *3、未经原作者允许不得将本程序用于**任何商业目的**，否则将视为侵权；*
+- *4、转载或者引用本程序和本文内容请**注明来源及原作者**；*
+- *5、对于不遵守此声明或者其他违法使用本程序和本文内容者，本人依法保留追究权等.*
 
 ## Release History
 
