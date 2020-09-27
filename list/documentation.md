@@ -8,7 +8,8 @@ show_profile: true
 
 {% include baidu-analysis.html %}
 
-## Get the document
+## Get the documentation
 
--  [Documents](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc)
+-  [User's manual](doc/OpenWALAS V1.0 User Manual.pdf)
+-  [Other documentation](doc)
 

@@ -29,7 +29,7 @@ OpenWALAS program suit  contains the functions of automatic meshing of ship hull
 
 ## How to use it
 
-This web site supplies the [*executable programs* ](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin) and [*documentations*](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc) of OpenWALAS and also provides [examples](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/example) of how you can use it.
+This web site supplies the [*executable programs* ](bin) and [*documentations*](doc) of OpenWALAS and also provides [examples](example) of how you can use it.
 
 ### - Two ways for running
 
@@ -49,9 +49,9 @@ This web site supplies the [*executable programs* ](https://github.com/OpenWALAS
 - -***macOS***: direct double click 'OpenWALAS.DWG' to install the software.
 - *The other versions of the executive programs* [*click here* ](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin).
 
-### - Documents
+### - Documentation
 
-[The documentations](doc/OpenWALAS V1.0 User Manual.pdf ) cover the basics of installing and using them.
+[The documentations](doc/OpenWALAS V1.0 User Manual.pdf ) cover the basic information of installing and using them.
 
 ### - Examples
 
@@ -72,10 +72,10 @@ OpenWALAS is distributed under the terms of the [GNU General Public License](htt
 
   - *OpenWALAS can be used internally ('in-house') without restriction, but only redistributed in other software that is under the GNU GPL*.
 
-The author always respects the intellectual property rights and labor achievements, and supports the behavior of sharing software and related documents. Any organization and individual can freely share the program and related documents within a limited scope, but the following principles should be followed.
+The author always respects the intellectual property rights and labor achievements, and supports the behavior of sharing software and related documents. Any organization and individual can freely share the program and related documentation within a limited scope, but the following principles should be followed.
 
 - (a) The projects encourage relevant researchers and authors to carry out joint-research, utilize this program, and further improve the program, so as to contribute to the technology development of global ship and ocean engineering;
-- (b) Copyrights of the software and documents belongs to the original author;
+- (b) Copyrights of the software and documentation belongs to the original author;
 - (c) This program shall not be used for any commercial purpose without the permission of the original author, otherwise it will be deemed as infringement;
 - (d) The source and the original author must be cited, if the software and the contents of this document are reprinted;
 - (e) For those who do not abide by this statement or illegally use this software and the contents of this document, the rights are reserved according to law.
