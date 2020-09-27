@@ -18,18 +18,18 @@ int main(void)
 	double PI = 3.1415926535898;
 	double G = 9.81;
 
-	//²»¹æÔòÆµÂÊµã¸öÊý
+	//ä¸è§„åˆ™é¢‘çŽ‡ç‚¹ä¸ªæ•°
 	int num = 3;
 	int num2 = num*num*2;
 
-	//ÊäÈë²ÎÊý
-    //a: length
-    //b: broadth
-    //T: draught
+	//è¾“å…¥å‚æ•°
+	//a: length
+	//b: broadth
+	//T: draught
 	double L, B, T;
-	L = 100.0;//³¤
-	B = 25;//¿í
-	T = 2.5;//³ÔË®
+	L = 100.0;//é•¿
+	B = 25;//å®½
+	T = 2.5;//åƒæ°´
 
 	double *w0 = (double*)calloc(num2, sizeof(double));
 	if(w0 == NULL)
@@ -45,13 +45,13 @@ int main(void)
 		{
 			double kn, w;
 			double r = sqrt(pow(i*PI/L, 2.) + pow(j*PI/B, 2.));
-			kn = r/tanh(r*T);//²¨Êý
+			kn = r/tanh(r*T);//æ³¢æ•°
 			w = sqrt(G*kn);
 			w0[count] = w;
 			count++;
 
 			r = sqrt(pow((i-0.5)*PI/L, 2.) + pow((j-0.5)*PI/B, 2.));
-			kn = r/tanh(r*T);//²¨Êý
+			kn = r/tanh(r*T);//æ³¢æ•°
 			w = sqrt(G*kn);
 			w0[count] = w;
 			count++;
@@ -59,7 +59,7 @@ int main(void)
 		}
 	}
 
-	//Ã°ÅÝÉýÐòÅÅÁÐ
+	//å†’æ³¡å‡åºæŽ’åˆ—
 	for(i = num2 - 1; i >= 1; i--)
 		for(j = 0; j < i; j++)
 		{
