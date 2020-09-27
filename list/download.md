@@ -13,5 +13,5 @@ show_profile: true
 -  Windows: 
 -  -  64bits [OpenWALAS.msi ](bin/OpenWALAS2020_1.0_X64_64BITS.msi)
 -  -  32bits [OpenWALAS.msi ](bin/OpenWALAS2020_1.0_X86_32BITS.msi)
--  [Other versions](bin)
+-  [Other versions](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin)
 

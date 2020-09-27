@@ -11,5 +11,5 @@ show_profile: true
 ## Get the documentation
 
 -  [User's manual](doc/OpenWALAS V1.0 User Manual.pdf)
--  [Other documentation](doc)
+-  [Other documentation](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc)
 
