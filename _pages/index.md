@@ -44,7 +44,7 @@ This web site supplies the [*executable programs* ](https://github.com/OpenWALAS
 ### - Installation
 
 - Designed for Linux, Windows and macOS operation system.
-- -***Windows***: direct double click ['OpenWALAS.msi' ](bin/OpenWALAS2020_1.0_X64_64BITS.msi) to install the software.
+- -***Windows***: direct double click ['OpenWALAS.msi' ](bin/OpenWALAS2020_1.0_X64_64BITS.exe) to install the software.
 - -***Linux***: direct double click 'OpenWALAS.deb' to install the software or compile from the source files.
 - -***macOS***: direct double click 'OpenWALAS.DWG' to install the software.
 - *The other versions of the executive programs* [*click here* ](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin).
