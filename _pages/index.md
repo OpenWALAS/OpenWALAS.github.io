@@ -96,12 +96,12 @@ The author always respects the intellectual property rights and labor achievemen
 
 
 - [1] Wu, Y.S., 1984, Hydroelasticity of floating bodies. Ph.D., Thesis, Brunel University, U.K. 
-- [2] Yang P, Gu XK, Tian C, Cheng XM, Ding J. 2014. Numerical Study of 3D Pulsating Source Green Function of Finite Water Depth, Proceedings of the 33th International Conference on Ocean, Offshore and Arctic Engineering (OMAE), San Francisco, California, USA, June.
-- [3] Yang, P., 2016. 3D Nonlinear Hydro-elastic Response Study of Ships in Time Domain (Doctoral thesis,). China Ship Scientific Research Center, Wuxi, China. (In Chinese).
-- [4] Yang P, Ye MX, Li JC, et al. 2018. Mathematical derivation of simplified calculation of symmetrical green function. Chinese Journal of Ship Research, 13 (Supp 1): 22-28.
-- [5] Yang P，Kou GY，Zhu XK, et al. 2019. Numerical calculation method for wave loads of floating structures in shallow water. Chinese Journal of Ship Research, 14(1): 19-26.
-- [6] Yang P, Li JR, Gu XK, Wu DW. 2019. Application of the 3D time-domain Green's function for finite water depth in hydroelastic mechanics. Ocean Engineering, 189. 
-- [7] Yang P, Li JR, Wu DW, Zhang W. 2020. Irregular Frequency Elimination of Three-Dimensional Hydroelasticity in Frequency Domain. Ocean Engineering, 196.
+- [2] Yang P, Gu XK, Tian C, Cheng XM, Ding J. 2014. [Numerical Study of 3D Pulsating Source Green Function of Finite Water Depth](doc/Numerical Study of 3D Pulsating Source Green Function of Finite Water Depth.pdf), Proceedings of the 33th International Conference on Ocean, Offshore and Arctic Engineering (OMAE), San Francisco, California, USA, June.
+- [3] Yang, P., 2016. [3D Nonlinear Hydro-elastic Response Study of Ships in Time Domain (Doctoral thesis,)](doc/3D Nonlinear Hydro-elastic Response Study of Ships in Time Domain-Ph.D thesis.pdf). China Ship Scientific Research Center, Wuxi, China. (In Chinese).
+- [4] Yang P, Ye MX, Li JC, et al. 2018. [Mathematical derivation of simplified calculation of symmetrical green function](doc/Mathematical derivation of simplified calculation of symmetrical green function.pdf). Chinese Journal of Ship Research, 13 (Supp 1): 22-28.
+- [5] Yang P，Kou GY，Zhu XK, et al. 2019. [Numerical calculation method for wave loads of floating structures in shallow water](doc/Numerical calculation method for wave loads of floating structures in shallow water.pdf). Chinese Journal of Ship Research, 14(1): 19-26.
+- [6] Yang P, Li JR, Gu XK, Wu DW. 2019. [Application of the 3D time-domain Green's function for finite water depth in hydroelastic mechanics](Application of the 3D time-domain Green's function for fnite water depth-OE.pdf). Ocean Engineering, 189. 
+- [7] Yang P, Li JR, Wu DW, Zhang W. 2020. [Irregular Frequency Elimination of Three-Dimensional Hydroelasticity in Frequency Domain](doc/Irregular frequency elimination of three-dimensional hydroelasticity in frequency domain -Peng Yang.pdf). Ocean Engineering, 196.
 
 <hr />
 
