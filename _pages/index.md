@@ -29,7 +29,7 @@ OpenWALAS program suit  contains the functions of automatic meshing of ship hull
 
 ## How to use it
 
-This web site supplies the [*executable programs* ](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin) and [*documentations*](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc) of OpenWALAS and also provides [examples](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/example) of how you can use it.
+This web site supplies the [*executable programs* ](https://github.com/OpenWALAS/OpenWALAS.github.io/releases) and [*documentations*](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/doc) of OpenWALAS and also provides [examples](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/example) of how you can use it.
 
 ### - Two ways for running
 
@@ -44,10 +44,10 @@ This web site supplies the [*executable programs* ](https://github.com/OpenWALAS
 ### - Installation
 
 - Designed for Linux, Windows and macOS operation system.
-- -***Windows***: direct double click ['OpenWALAS' ](bin/OpenWALAS2020_1.0_X64_64BITS_Win.7z) to install the software.
-- -***Linux***: direct double click '[OpenWALAS](bin/OpenWALAS2020_1.0_X64_64BITS_Linux.deb)' to install the software or compile from the source files.
+- -***Windows***: direct double click ['OpenWALAS' ](https://github.com/OpenWALAS/OpenWALAS.github.io/releases/download/V1.0.0/OpenWALAS2020_1.0_X64_64BITS.exe) to install the software.
+- -***Linux***: direct double click '[OpenWALAS](https://github.com/OpenWALAS/OpenWALAS.github.io/releases/download/V1.0.0/OpenWALAS2020_1.0_X64_64BITS.deb)' to install the software or compile from the source files.
 - -***macOS***: direct double click 'OpenWALAS' to install the software.
-- *The other versions of the executive programs* [*click here* ](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/master/bin).
+- *The other versions of the executive programs* [*click here* ](https://github.com/OpenWALAS/OpenWALAS.github.io/releases).
 
 ### - Documentation
 
