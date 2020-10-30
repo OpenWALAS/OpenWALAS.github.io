@@ -2,7 +2,7 @@
 
 ## 3D Wave Load and Hydroelasticity Analysis Software
 
-* My own homepage, http://openWALAS.github.io
+* My own homepage, https://openwalas.github.io
 
 ## Get Started
 
