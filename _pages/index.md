@@ -18,6 +18,8 @@ title: Welcome to OpenWALAS
 
 ![main-UI](picture\main-UI.png)
 
+![multi-model](picture\multi-model.png)
+
 {% include components/intro.md %}
 
 OpenWALAS program suit  contains the functions of automatic meshing of ship hulls, cut-off hull mesh, straight beam modal analysis, characteristic calculation of transverse section, as well as 3D model display and 2D curve drawing. The software suit contains the GUI program OpenWALAS and five non-GUI core programs: OpenWALAS_PRE, OpenWALAS_FSCM, OpenWALAS_TDGF, OpenWALAS _IORM and OpenWALAS _TIME_RESP.
