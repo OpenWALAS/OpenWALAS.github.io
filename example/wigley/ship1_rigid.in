@@ -1,9 +1,13 @@
 JOB WALAS
-"nodeElement_walas.wet"
-"nodeElement.dry"
-"node.modal"
-"element.modal"
-"element.dudx"
+"ship1_nodeElement.wet"
+"ship1_nodeElement.dry"
+"ship1_node.modal"
+"ship1_element.modal"
+"ship1_element.dudx"
+"ship1_nodeElement_free_.wet"
+"ship1_nodeElement_control.wet"
+"ship1_wave.in"
+"ship1_slmParam.ini"
 30  0.  2   1   1    0    0    -3.0    3.0      0.1
 0   0   -1.0
 9.847E+04  5.323E+06   5.758E+06 0.0 0.0 0.0

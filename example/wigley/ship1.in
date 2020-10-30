@@ -4,7 +4,11 @@ JOB WALAS
 "ship1_node.modal"
 "ship1_element.modal"
 "ship1_element.dudx"
-30          0           2           1           1           0           0           -6          6.0           0.1        
+"ship1_nodeElement_free_.wet"
+"ship1_nodeElement_control.wet"
+"ship1_wave.in"
+"ship1_slmParam.ini"
+30          0           2           1           1           0           0           -6          6.0           0.05        
 0            0           -1          
 98470       5.323E+06   5.758E+06   0           0           0           
 0           0           0           0
