@@ -6,7 +6,6 @@ JOB WALAS
 "ship1_element.dudx"
 "ship1_nodeElement_free_.wet"
 "ship1_nodeElement_control.wet"
-"ship1_wave.in"
 "ship1_slmParam.ini"
 30  0.  2   1   1    0    0    -3.0    3.0      0.1
 0   0   -1.0
@@ -67,6 +66,9 @@ JOB WALAS
 -7.5   0   -1
 0      0   -1
 7.5    0   -1
+SPRINGER
+0
+1.0e4    1.0e4      0      0      0       1.0e6  
 
 
 
