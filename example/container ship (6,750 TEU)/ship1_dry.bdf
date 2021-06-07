@@ -1,0 +1,104 @@
+$ NASTRAN input file created by the Patran 2008r2 input file translator
+$ on July      16, 2015 at 16:36:42.
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Direct Text Input for Executive Control
+$ Normal Modes Analysis, Database
+SOL 103
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran job created on 04-Jul-14 at 13:45:45
+ECHO = NONE
+RESVEC = YES
+SUBCASE 1
+   TITLE=This is a default subcase.
+   METHOD = 1
+   VECTOR(SORT1,REAL)=ALL
+   SPCFORCES(SORT1,REAL)=ALL
+   MPCFORCES(SORT1,REAL)=ALL
+   STRESS(SORT1,REAL,VONMISES,BILIN)=ALL
+   FORCE(SORT1,REAL,BILIN)=ALL
+$ Direct Text Input for this Subcase
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+PARAM    POST    0
+PARAM   PRTMAXIM YES
+EIGRL    1       0.     10.      20      0                       MAX
+$ Elements and Element Properties for region : p2
+PBARL    1       1               BOX
+        7.      3.5     .161    .161
+$ Pset: "p2" will be imported as: "pbarl.1"
+CBAR     2       1       2       3       0.      0.     1.
+$ Elements and Element Properties for region : p1
+PBARL    2       2               BOX
+        7.      3.5     .161    .161
+$ Pset: "p1" will be imported as: "pbarl.2"
+CBAR     1       2       1       2       0.      0.     1.
+$ Elements and Element Properties for region : p3
+PBARL    3       3               BOX
+        7.      3.5     .161    .161
+$ Pset: "p3" will be imported as: "pbarl.3"
+CBAR     3       3       3       4       0.      0.     1.
+$ Elements and Element Properties for region : p4
+PBARL    4       4               BOX
+        7.      3.5     .161    .161
+$ Pset: "p4" will be imported as: "pbarl.4"
+CBAR     4       4       4       5       0.      0.     1.
+$ Elements and Element Properties for region : p5
+PBARL    5       5               BOX
+        7.      3.5     .161    .161
+$ Pset: "p5" will be imported as: "pbarl.5"
+CBAR     5       5       5       6       0.      0.     1.
+$ Elements and Element Properties for region : p6
+PBARL    6       6               BOX
+        7.      3.5     .161    .161
+$ Pset: "p6" will be imported as: "pbarl.6"
+CBAR     6       6       6       7       0.      0.     1.
+$ Elements and Element Properties for region : p7
+PBARL    7       7               BOX
+        7.      3.5     .161    .161
+$ Pset: "p7" will be imported as: "pbarl.7"
+CBAR     7       7       7       8       0.      0.     1.
+$ Elements and Element Properties for region : p8
+PBARL    8       8               BOX
+        7.      3.5     .161    .161
+$ Pset: "p8" will be imported as: "pbarl.8"
+CBAR     8       8       8       9       0.      0.     1.
+$ Referenced Material Records
+$ Material Record : BAR1
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     2      1.4+13          .3      75674.3
+$ Material Record : BAR2
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     1      1.4+13          .3      75036.4
+$ Material Record : BAR3
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     3      1.4+13          .3      109962.
+$ Material Record : BAR4
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     4      1.4+13          .3      126295.
+$ Material Record : BAR5
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     5      1.4+13          .3      130743.
+$ Material Record : BAR6
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     6      1.4+13          .3      115325.
+$ Material Record : BAR7
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     7      1.4+13          .3      99806.4
+$ Material Record : BAR8
+$ Description of Material : Date: 04-Jul-14           Time: 13:09:41
+MAT1     8      1.4+13          .3      68505.9
+$ Nodes of the Entire Model
+GRID     1              5.       0.     7.35
+GRID     2              46.64    0.     7.35
+GRID     3              66.34    0.     7.35
+GRID     4              94.21    0.     7.35
+GRID     5              122.97   0.     7.35
+GRID     6              151.73   0.     7.35
+GRID     7              180.49   0.     7.35
+GRID     8              209.25   0.     7.35
+GRID     9              279.85   0.     7.35
+$ Loads for Load Case : Default
+$ Referenced Coordinate Frames
+ENDDATA d7f9bb37

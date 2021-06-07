@@ -1,0 +1,1070 @@
+1
+ 
+ 
+ 
+ 
+                     THIS PROGRAM IS CONFIDENTIAL AND A TRADE SECRET OF MSC.SOFTWARE CORPORATION.  THE RECEIPT OR    
+                  POSSESSION OF THIS PROGRAM DOES NOT CONVEY ANY RIGHTS TO REPRODUCE OR DISCLOSE ITS CONTENTS, OR TO 
+                 MANUFACTURE, USE, OR SELL ANYTHING HEREIN, IN WHOLE OR IN PART, WITHOUT THE SPECIFIC WRITTEN CONSENT
+                                                    OF MSC.SOFTWARE CORPORATION.                                     
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           MSC.SOFTWARE          * *
+                                              * *               CORP              * *
+                                              * *                                 * *
+                                              * *      M S C . N a s t r a n      * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *        Version 2007.0.0         * *
+                                              * *            2007 R1              * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          APR  3, 2007           * *
+                                              * *                                 * *
+                                              * *              Intel              * *
+                                              * *  MODEL PentiumIII/6015 (sesam)  * *
+                                              * *   Windows XP 5.1 (Build 2600)   * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+1News file - (March 21, 2007):
+  
+ Thank you for choosing MSC Nastran, the industry standard in FEA.
+  
+                    Welcome to MSC Nastran 2007 r1.
+  
+ Details of the release can be found in the Release Guide available
+ electronically in the installation sub-directory. You can find
+ version-specific online technical support at:
+  
+   http://www.mscsoftware.com/support/prod_support/nastran/
+  
+  
+ Also at the technical support location is a searchable list of technical
+ application notes and the current error/avoidance list. Please don't hesitate
+ to contact your nearest technical support representative if you require
+ assistance.
+  
+    http://www.mscsoftware.com/about/locate/
+  
+ MSC.Nastran 2007 r1 provides new features and enhancements in the areas of
+ high performance computing, nonlinear analysis, assembly modeling,
+ optimization, rotor dynamics and aeroelasticity. These include:
+  
+ MSC Nastran Implicit Nonlinear (SOL 600)
+ - Heat Transfer. Advanced thermal analysis including hemi-cube viewfactor
+ method and automated procedures for thermal stress analysis. Thermal
+ analysis of composites may include thermal gradient through the thickness.
+ - Modeling Enhancements.  Large deformation formulations of CFAST, CWELD
+ and CBUSH.  Calculation of stress intensity factors using either the VCCT
+ or Lorenzi method and the prediction of delamination.
+ - Performance Improvements.  A new streaming input option that eliminates
+ transfer files.  Performance improvements for composite shells offers
+ reduced assembly time and memory requirements. Additional improvements
+ from out-of-core iterative and direct PLOAD4 support.
+  
+ Numeric Enhancements
+ - Two new sparse solvers; TAUCS (statics) and UMFPACK (unsymmetric).
+ - Lanczos has been enhanced to take advantage of available memory.
+ - Automatic optimal reordering selection for solid models to eliminate
+ having the user set flags.
+ - Relaxed restrictions to CASI iterative solver for statics of large
+ solid models includes expanded list of supported element types.
+ - Automated Component Modal Synthesis (ACMS) extended to External
+ Superelements for reductions in compute time, I/O and scratch space.
+ - MSC Nastran 2007 r1 has been ported to Microsoft Compute Cluster.
+ - Compute kernels for x86_64 platforms optimized for Intel and AMD systems.
+ - User diagnostics pivot ratio bar chart to localize model singularities.
+  
+ Elements and Connectors
+1- New seamweld (CSEAM) connector element for assembly modeling.
+ - Spot weld elements (CWELD, CFAST) end point displacement output to view
+ relationship between the spot weld and the connecting shells.
+ - A new connector type RBE2GS to optionally search and connect independent
+ grids of the two closest RBE2 elements with a specified search radius.
+  
+ Optimization
+ - Topology Optimization.  This release provides combined topology, sizing
+ and shape optimization simultaneously to find possible better designs.
+ Different mass targets can now be applied on multiple design parts of the
+ structure. Symmetry constrains extended to cyclical applications. An adjoint
+ design sensitivity analysis method implemented for inertia relief sizing
+ optimization. Significant performance enhancement with minimum member
+ size control achieved for large number of sizing design variables.
+ - Automatic External Superelement Optimization (AESO). This new feature
+ automatically partitions the model into a designed and non-designed part
+ (external Superelement) for efficient optimization. Order of magnitude
+ speedup can be achieved without requiring user knowledge of superlements.
+ - Randomization (Pre-release). New randomization capability to stochastically
+ introduce uncertainty into a model such as tolerances in connectivity,
+ properties and loads. Pre-release only.
+  
+ RotorDynamics
+ - Unbalance loading can now be used for frequency response with the rotor
+ dynamics option. Frequency response case control can be used directly in
+ SOL 146 since we can now handle multiple RGYRO subcases in rotor dynamics.
+ - Damping specification has been simplified and allow for new damping
+ formulations such as hybrid damping.
+ - Pre-Release capability: Effects of rotor stiffness, mass, and damping
+ effects can be included in SOL 200 optimization. Pre-release only.
+  
+ Aeroelasticity
+ - Monitoring points can now be updated and summed. A new type of monitoring
+ point (MONCNCM) has been introduced for monitoring stripwise aerodynamic
+ results such as lift and pitching moments. Other enhancements include
+ various splining techniques for aerodynamic structural applications.
+  
+1                                                                              JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     NASTRAN OP2NEW=0 $ MSC.NASTRAN .LCL FILE                                        
+     NASTRAN BUFFSIZE=8193 $(C:/MSC.SOFTWARE/MSC_NASTRAN/CONF/NAST2007.RCF[2])       
+     NASTRAN REAL=931921920 $(PROGRAM DEFAULT)                                       
+     $ NASTRAN INPUT FILE CREATED BY THE PATRAN 2008R2 INPUT FILE TRANSLATOR         
+     $ ON JULY      16, 2015 AT 16:36:42.                                            
+     $ DIRECT TEXT INPUT FOR NASTRAN SYSTEM CELL SECTION                             
+     $ DIRECT TEXT INPUT FOR FILE MANAGEMENT SECTION                                 
+     $ DIRECT TEXT INPUT FOR EXECUTIVE CONTROL                                       
+     $ NORMAL MODES ANALYSIS, DATABASE                                               
+1                                                                              JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     SOL 103                                                                                 
+     CEND                                                                                    
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     3
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      $ DIRECT TEXT INPUT FOR GLOBAL CASE CONTROL DATA                                        
+                  2      TITLE = MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                                
+                  3      ECHO = NONE                                                                             
+                  4      RESVEC = YES                                                                            
+                  5      SUBCASE 1                                                                               
+                  6         TITLE=THIS IS A DEFAULT SUBCASE.                                                     
+                  7         METHOD = 1                                                                           
+                  8         VECTOR(SORT1,REAL)=ALL                                                               
+                  9         SPCFORCES(SORT1,REAL)=ALL                                                            
+                 10         MPCFORCES(SORT1,REAL)=ALL                                                            
+                 11         STRESS(SORT1,REAL,VONMISES,BILIN)=ALL                                                
+                 12         FORCE(SORT1,REAL,BILIN)=ALL                                                          
+                 13      $ DIRECT TEXT INPUT FOR THIS SUBCASE                                                    
+                 14      BEGIN BULK                                                                              
+0                             INPUT BULK DATA ENTRY COUNT =      82
+0                       TOTAL COUNT=        45
+
+
+                                        M O D E L   S U M M A R Y
+
+                                   NUMBER OF GRID     POINTS   =        9
+  
+                                   NUMBER OF CBAR     ELEMENTS =        8
+  
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+ *** USER INFORMATION MESSAGE 7310 (VECPRN)
+     ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM WILL BE USED AS REFERENCE LOCATION.
+     RESULTANTS ABOUT ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM IN SUPERELEMENT BASIC SYSTEM COORDINATES.
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX    0.000000E+00     ----          ----          ----       0.000000E+00  0.000000E+00                             
+               FY       ----       0.000000E+00     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ *** SYSTEM INFORMATION MESSAGE 6916 (MREORDR)
+     DECOMP ORDERING METHOD CHOSEN: DEFAULT, ORDERING METHOD USED: BEND
+  
+ *** USER INFORMATION MESSAGE 4158 (DFMSA)
+ ---- STATISTICS FOR SPARSE DECOMPOSITION OF DATA BLOCK SCRATCH  FOLLOW
+        NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL =      1
+        MAXIMUM RATIO OF MATRIX DIAGONAL TO FACTOR DIAGONAL =  6.0E+15 AT ROW NUMBER         10
+ *** USER INFORMATION MESSAGE 5010 (LNCILD)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = -2.597648D+01, CYCLES = 8.111670D-01 NUMBER OF EIGENVALUES BELOW THIS VALUE = 1
+  
+ *** USER INFORMATION MESSAGE 4158 (DFMSA)
+ ---- STATISTICS FOR SPARSE DECOMPOSITION OF DATA BLOCK SCRATCH  FOLLOW
+        NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL =      1
+        MAXIMUM RATIO OF MATRIX DIAGONAL TO FACTOR DIAGONAL =  6.0E+15 AT ROW NUMBER         10
+ *** USER INFORMATION MESSAGE 5010 (LNCILD)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = -2.857413D+01, CYCLES = 8.507592D-01 NUMBER OF EIGENVALUES BELOW THIS VALUE = 1
+  
+ *** USER INFORMATION MESSAGE 4158 (DFMSA)
+ ---- STATISTICS FOR SPARSE DECOMPOSITION OF DATA BLOCK SCRATCH  FOLLOW
+        NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL =      1
+        MAXIMUM RATIO OF MATRIX DIAGONAL TO FACTOR DIAGONAL =  6.0E+15 AT ROW NUMBER         10
+ *** USER INFORMATION MESSAGE 5010 (LNCILD)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = -5.455061D+01, CYCLES = 1.175493D+00 NUMBER OF EIGENVALUES BELOW THIS VALUE = 1
+ *** SYSTEM WARNING MESSAGE 7340 (LNNHERR)
+     PROCESS ERROR REPORTED BY SUBROUTINE LNNP1ED  (IER=  -729)
+     USER INFORMATION:  REPEATED SINGULAR MATRIX -- PROBABLY ILL-POSED PROBLEM.
+ *** SYSTEM WARNING MESSAGE 7340 (LNNHERR)
+     PROCESS ERROR REPORTED BY SUBROUTINE LNNDRVD  (IER=  -729)
+     USER INFORMATION:  REPEATED SINGULAR MATRIX -- PROBABLY ILL-POSED PROBLEM.
+
+ TABLE OF SHIFTS:  (LNNRIGL)
+ SHIFT #        SHIFT VALUE         FREQUENCY, CYCLES     # EIGENVALUES BELOW    # NEW EIGENVALUES FOUND
+     1.       -2.5976482E+01         -8.1116700E-01           FACTOR ERROR                   0
+     2.       -2.8574131E+01         -8.5075915E-01           FACTOR ERROR                   0
+     3.       -5.4550613E+01         -1.1754928E+00           FACTOR ERROR                   0
+
+ *** SYSTEM WARNING MESSAGE 7340 (LNNRIGL)
+     REPEATED SINGULAR MATRIX -- PROBABLY ILL-POSED PROBLEM.
+ ^^^     
+ ^^^ USER INFORMATION MESSAGE 9118 (MMFIND1) 
+ ^^^ IDENTIFICATION OF RIGID BODY MODES AND POSSIBLE 
+ ^^^ IF ANY MASSLESS MECHANISMS ARE FOUND THEN   THEY WILL BE AUTOMATICALLY CONSTRAINED. 
+ ^^^     
+ *** SYSTEM INFORMATION MESSAGE 6916 (MREORDR)
+     DECOMP ORDERING METHOD CHOSEN: DEFAULT, ORDERING METHOD USED: BEND
+  
+ *** USER INFORMATION MESSAGE 4158 (DFMSA)
+ ---- STATISTICS FOR SPARSE DECOMPOSITION OF DATA BLOCK KXX      FOLLOW
+        NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL =      1
+        MAXIMUM RATIO OF MATRIX DIAGONAL TO FACTOR DIAGONAL =  2.8E+16 AT ROW NUMBER         10
+ *** USER WARNING MESSAGE 4698 (DCMPD)
+     STATISTICS FOR DECOMPOSITION OF MATRIX KXX.
+     THE FOLLOWING DEGREES OF FREEDOM HAVE FACTOR DIAGONAL RATIOS GREATER THAN
+     1.000000E+07 OR HAVE NEGATIVE TERMS ON THE FACTOR DIAGONAL.
+     USER INFORMATION:
+     THIS MESSAGE MAY BE IGNORED IF NO GRID POINT IDS OR HIGH RATIO MESSAGES APPEAR IN THE TABLE ON THE NEXT PAGE.
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     5
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+0                                                                                                                                   
+         GRID POINT ID       DEGREE OF FREEDOM   MATRIX/FACTOR DIAGONAL RATIO        MATRIX DIAGONAL                                
+                                                                                                                                    
+               2                    T1                   2.81063E+15                   3.43094E+12
+               2                    T2                   4.83310E+15                   2.94989E+11
+               2                    T3                   4.86939E+15                   1.02164E+11
+               2                    R1                   2.76842E+16                   6.75884E+12
+               2                    R2                   1.53015E+14                   2.21562E+13
+               2                    R3                  -1.51722E+14                   6.47487E+13
+ *** USER INFORMATION MESSAGE 5458 (REIG)
+     QL HOUSEHOLDER METHOD IS AUTOMATICALLY SELECTED .
+ *** USER INFORMATION MESSAGE 5458 (REIG)
+     QL HOUSEHOLDER METHOD IS AUTOMATICALLY SELECTED .
+ ^^^     
+ ^^^ USER INFORMATION MESSAGE 9119 (MMFIND1) 
+ ^^^    5          RIGID BODY MODE(S) AND 1          MASSLESS MECHANISM(S) ARE DETECTED. 
+ ^^^     
+ *** USER INFORMATION MESSAGE 5458 (REIG)
+     QL HOUSEHOLDER METHOD IS AUTOMATICALLY SELECTED .
+ ^^^     
+ ^^^ USER INFORMATION MESSAGE 9146 (MMFIND1) 
+ ^^^ THE FOLLOWING DEGREES-OF-FREEDOM ARE CONSTRAINED    TO PREVENT MASSLESS MECHANISMS DURING EIGENSOLUTION.    
+ ^^^     
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     6
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+0                VAXF1                                                                                                              
+     POINT           VALUE     POINT           VALUE     POINT           VALUE     POINT           VALUE     POINT           VALUE  
+                                                                                                                                    
+
+ COLUMN           1
+          3 R1  1.00000E+00
+ *** SYSTEM INFORMATION MESSAGE 6916 (MREORDR)
+     DECOMP ORDERING METHOD CHOSEN: DEFAULT, ORDERING METHOD USED: BEND
+ *** USER INFORMATION MESSAGE 5010 (LNCILD)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = -2.622040D+01, CYCLES = 8.149665D-01 NUMBER OF EIGENVALUES BELOW THIS VALUE = 0
+ *** USER INFORMATION MESSAGE 5010 (LNCILD)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = 3.947842D+03, CYCLES = 9.999999D+00 NUMBER OF EIGENVALUES BELOW THIS VALUE = 12
+ *** USER INFORMATION MESSAGE 5010 (LNCILD)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = 2.622040D+01, CYCLES = 8.149665D-01 NUMBER OF EIGENVALUES BELOW THIS VALUE = 6
+
+ TABLE OF SHIFTS:  (LNNRIGL)
+ SHIFT #        SHIFT VALUE         FREQUENCY, CYCLES     # EIGENVALUES BELOW    # NEW EIGENVALUES FOUND
+     1.       -2.6220398E+01         -8.1496650E-01                 0                        0
+     2.        3.9478416E+03          9.9999990E+00                12                        0
+     3.        2.6220398E+01          8.1496650E-01                 6                       12
+
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     7
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+0
+
+
+                          E I G E N V A L U E  A N A L Y S I S   S U M M A R Y   (READ MODULE) 
+
+
+
+                                     BLOCK SIZE USED ......................    7
+
+                                     NUMBER OF DECOMPOSITIONS .............    3
+
+                                     NUMBER OF ROOTS FOUND ................   12
+
+                                     NUMBER OF SOLVES REQUIRED ............    6
+
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     8
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+ 
+                                              R E A L   E I G E N V A L U E S
+                                         (BEFORE AUGMENTATION OF RESIDUAL VECTORS)
+   MODE    EXTRACTION      EIGENVALUE            RADIANS             CYCLES            GENERALIZED         GENERALIZED
+    NO.       ORDER                                                                       MASS              STIFFNESS
+        1         1       -6.064482E-12        2.462617E-06        3.919376E-07        8.559198E+07       -5.190711E-04
+        2         2       -5.648815E-13        7.515860E-07        1.196186E-07        3.077779E+07       -1.738580E-05
+        3         3       -2.593481E-13        5.092623E-07        8.105161E-08        2.160120E+07       -5.602230E-06
+        4         4        4.263256E-14        2.064765E-07        3.286176E-08        1.826756E+07        7.787930E-07
+        5         5        7.815970E-13        8.840797E-07        1.407057E-07        2.062014E+07        1.611664E-05
+        6         6        2.434479E+01        4.934044E+00        7.852775E-01        1.999269E+07        4.867179E+08
+        7         7        7.208415E+01        8.490238E+00        1.351263E+00        1.999451E+07        1.441287E+09
+        8         8        1.532431E+02        1.237914E+01        1.970201E+00        2.250566E+07        3.448837E+09
+        9         9        4.534271E+02        2.129383E+01        3.389018E+00        2.251110E+07        1.020714E+10
+       10        10        6.019545E+02        2.453476E+01        3.904829E+00        3.206145E+07        1.929954E+10
+       11        11        1.778778E+03        4.217557E+01        6.712450E+00        3.206156E+07        5.703041E+10
+       12        12        1.847336E+03        4.298065E+01        6.840582E+00        4.194771E+07        7.749151E+10
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE     9
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+ *** SYSTEM INFORMATION MESSAGE 6916 (MREORDR)
+     DECOMP ORDERING METHOD CHOSEN: DEFAULT, ORDERING METHOD USED: BEND
+  
+ *** SYSTEM INFORMATION MESSAGE 4159 (DFMSA)
+     THE DECOMPOSITION OF KYY      YIELDS A MAXIMUM MATRIX-TO-FACTOR-DIAGONAL RATIO OF    3.551797E+00
+ *** USER WARNING MESSAGE 4698 (DCMPD)
+     STATISTICS FOR DECOMPOSITION OF MATRIX KYY.
+     THE FOLLOWING DEGREES OF FREEDOM HAVE FACTOR DIAGONAL RATIOS GREATER THAN
+     1.000000E+07 OR HAVE NEGATIVE TERMS ON THE FACTOR DIAGONAL.
+     USER INFORMATION:
+     THIS MESSAGE MAY BE IGNORED IF NO GRID POINT IDS OR HIGH RATIO MESSAGES APPEAR IN THE TABLE ON THE NEXT PAGE.
+ ^^^     
+ ^^^ USER INFORMATION MESSAGE 9037 (RESLOAD )    
+ ^^^ THE RESIDUAL VECTOR LOADS AND INITIAL CONDITIONS    ARE NOT LINEARLY INDEPENDENT WITH MODAL VECTORS OR                        
+     NO RESIDUAL VECTOR LOADS AND INITIAL CONDITIONS WERE FOUND AFTER FILTERING AND SWEEPING.    
+ ^^^ USER INFORMATION:  RESIDUAL VECTORS WILL NOT    BE ADDED TO THE MODAL VECTORS.  
+ ^^^     
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    10
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+0                                                  MAXIMUM  DISPLACEMENTS   
+  SUBCASE/
+  DAREA ID        T1             T2             T3             R1             R2             R3
+0        1   1.0000000E+00  8.3844978E-03  2.6866399E-02  0.0000000E+00  1.0855829E-04  2.3807985E-05
+0        2   3.4875099E-03  1.0000000E+00  1.0316429E-01  0.0000000E+00  4.5013695E-04  3.4336916E-03
+0        3   1.9856861E-03  1.1364362E-01  1.0000000E+00  0.0000000E+00  4.3595852E-03  6.6607632E-04
+0        4   4.1643376E-05  1.0000000E+00  5.5072293E-02  0.0000000E+00  1.8280360E-04  5.6803562E-03
+0        5   6.8964427E-03  1.9351009E-02  1.0000000E+00  0.0000000E+00  5.1417463E-03  1.0986823E-04
+0        6   1.7573399E-19  2.5908775E-18  1.0000000E+00  0.0000000E+00  1.6253227E-02  1.7875121E-20
+0        7   1.5965582E-17  1.0000000E+00  2.7469530E-15  0.0000000E+00  6.0898995E-17  1.6250229E-02
+0        8   4.2070438E-16  1.2951301E-14  1.0000000E+00  0.0000000E+00  2.7755700E-02  1.9786477E-16
+0        9   8.0488819E-16  1.0000000E+00  9.5640516E-14  0.0000000E+00  5.1742223E-15  2.7737927E-02
+0       10   9.7277787E-15  3.3622372E-13  1.0000000E+00  0.0000000E+00  4.7614805E-02  9.5248550E-15
+0       11   1.5247877E-14  1.0000000E+00  1.0179684E-12  0.0000000E+00  6.3943507E-14  4.7538284E-02
+0       12   3.6340475E-14  1.2577183E-12  1.0000000E+00  0.0000000E+00  5.9144493E-02  5.9756162E-14
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    11
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -6.064482E-12
+          CYCLES =  3.919376E-07         R E A L   E I G E N V E C T O R   N O .          1
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      1.000000E+00   8.384498E-03  -2.686640E-02   0.0           -1.085583E-04  -2.380798E-05
+             2      G      1.000000E+00   7.393133E-03  -2.234603E-02   0.0           -1.085583E-04  -2.380798E-05
+             3      G      1.000000E+00   6.924116E-03  -2.020743E-02   0.0           -1.085583E-04  -2.380798E-05
+             4      G      1.000000E+00   6.260587E-03  -1.718191E-02   0.0           -1.085583E-04  -2.380798E-05
+             5      G      1.000000E+00   5.575870E-03  -1.405978E-02   0.0           -1.085583E-04  -2.380798E-05
+             6      G      1.000000E+00   4.891152E-03  -1.093764E-02   0.0           -1.085583E-04  -2.380798E-05
+             7      G      1.000000E+00   4.206434E-03  -7.815504E-03   0.0           -1.085583E-04  -2.380798E-05
+             8      G      1.000000E+00   3.521717E-03  -4.693367E-03   0.0           -1.085583E-04  -2.380798E-05
+             9      G      1.000000E+00   1.840873E-03   2.970848E-03   0.0           -1.085583E-04  -2.380798E-05
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    12
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -5.648815E-13
+          CYCLES =  1.196186E-07         R E A L   E I G E N V E C T O R   N O .          2
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -3.487510E-03   1.000000E+00   2.055586E-02   0.0            4.501370E-04  -3.433692E-03
+             2      G     -3.487510E-03   8.570211E-01   1.812157E-03   0.0            4.501370E-04  -3.433692E-03
+             3      G     -3.487510E-03   7.893773E-01  -7.055542E-03   0.0            4.501370E-04  -3.433692E-03
+             4      G     -3.487510E-03   6.936803E-01  -1.960086E-02   0.0            4.501370E-04  -3.433692E-03
+             5      G     -3.487510E-03   5.949274E-01  -3.254680E-02   0.0            4.501370E-04  -3.433692E-03
+             6      G     -3.487510E-03   4.961744E-01  -4.549273E-02   0.0            4.501370E-04  -3.433692E-03
+             7      G     -3.487510E-03   3.974214E-01  -5.843867E-02   0.0            4.501370E-04  -3.433692E-03
+             8      G     -3.487510E-03   2.986685E-01  -7.138462E-02   0.0            4.501370E-04  -3.433692E-03
+             9      G     -3.487510E-03   5.624987E-02  -1.031643E-01   0.0            4.501370E-04  -3.433692E-03
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    13
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -2.593481E-13
+          CYCLES =  8.105161E-08         R E A L   E I G E N V E C T O R   N O .          3
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      1.985686E-03   1.136436E-01  -1.982321E-01   0.0           -4.359585E-03  -6.660763E-04
+             2      G      1.985686E-03   8.590820E-02  -1.669892E-02   0.0           -4.359585E-03  -6.660763E-04
+             3      G      1.985686E-03   7.278650E-02   6.918491E-02   0.0           -4.359585E-03  -6.660763E-04
+             4      G      1.985686E-03   5.422296E-02   1.906866E-01   0.0           -4.359585E-03  -6.660763E-04
+             5      G      1.985686E-03   3.506660E-02   3.160682E-01   0.0           -4.359585E-03  -6.660763E-04
+             6      G      1.985686E-03   1.591025E-02   4.414499E-01   0.0           -4.359585E-03  -6.660763E-04
+             7      G      1.985686E-03  -3.246105E-03   5.668316E-01   0.0           -4.359585E-03  -6.660763E-04
+             8      G      1.985686E-03  -2.240246E-02   6.922133E-01   0.0           -4.359585E-03  -6.660763E-04
+             9      G      1.985686E-03  -6.942745E-02   1.000000E+00   0.0           -4.359585E-03  -6.660763E-04
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    14
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  4.263256E-14
+          CYCLES =  3.286176E-08         R E A L   E I G E N V E C T O R   N O .          4
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -4.164338E-05  -5.612459E-01   4.828720E-03   0.0           -1.828036E-04   5.680356E-03
+             2      G     -4.164338E-05  -3.247158E-01   1.244066E-02   0.0           -1.828036E-04   5.680356E-03
+             3      G     -4.164338E-05  -2.128128E-01   1.604189E-02   0.0           -1.828036E-04   5.680356E-03
+             4      G     -4.164338E-05  -5.450130E-02   2.113663E-02   0.0           -1.828036E-04   5.680356E-03
+             5      G     -4.164338E-05   1.088657E-01   2.639406E-02   0.0           -1.828036E-04   5.680356E-03
+             6      G     -4.164338E-05   2.722328E-01   3.165149E-02   0.0           -1.828036E-04   5.680356E-03
+             7      G     -4.164338E-05   4.355998E-01   3.690892E-02   0.0           -1.828036E-04   5.680356E-03
+             8      G     -4.164338E-05   5.989668E-01   4.216636E-02   0.0           -1.828036E-04   5.680356E-03
+             9      G     -4.164338E-05   1.000000E+00   5.507229E-02   0.0           -1.828036E-04   5.680356E-03
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    15
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  7.815970E-13
+          CYCLES =  1.407057E-07         R E A L   E I G E N V E C T O R   N O .          5
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      6.896443E-03   1.084628E-02   1.000000E+00   0.0            5.141746E-03  -1.098682E-04
+             2      G      6.896443E-03   6.271362E-03   7.858977E-01   0.0            5.141746E-03  -1.098682E-04
+             3      G      6.896443E-03   4.106958E-03   6.846053E-01   0.0            5.141746E-03  -1.098682E-04
+             4      G      6.896443E-03   1.044930E-03   5.413048E-01   0.0            5.141746E-03  -1.098682E-04
+             5      G      6.896443E-03  -2.114880E-03   3.934282E-01   0.0            5.141746E-03  -1.098682E-04
+             6      G      6.896443E-03  -5.274691E-03   2.455516E-01   0.0            5.141746E-03  -1.098682E-04
+             7      G      6.896443E-03  -8.434501E-03   9.767498E-02   0.0            5.141746E-03  -1.098682E-04
+             8      G      6.896443E-03  -1.159431E-02  -5.020164E-02   0.0            5.141746E-03  -1.098682E-04
+             9      G      6.896443E-03  -1.935101E-02  -4.132089E-01   0.0            5.141746E-03  -1.098682E-04
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    16
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  2.434479E+01
+          CYCLES =  7.852775E-01         R E A L   E I G E N V E C T O R   N O .          6
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -1.757105E-19  -9.620072E-19   1.000000E+00   0.0            1.528856E-02   4.163061E-21
+             2      G     -1.757188E-19  -7.957891E-19   3.771714E-01   0.0            1.419963E-02   3.596261E-21
+             3      G     -1.757230E-19  -7.311215E-19   1.090991E-01   0.0            1.279050E-02   2.825618E-21
+             4      G     -1.757328E-19  -6.763959E-19  -2.058897E-01   0.0            9.426259E-03   8.308871E-22
+             5      G     -1.757335E-19  -6.949625E-19  -4.095021E-01   0.0            4.431384E-03  -2.384497E-21
+             6      G     -1.757321E-19  -8.196195E-19  -4.543348E-01   0.0           -1.387857E-03  -6.387039E-21
+             7      G     -1.757340E-19  -1.062884E-18  -3.312739E-01   0.0           -7.002372E-03  -1.045956E-20
+             8      G     -1.757321E-19  -1.417145E-18  -5.994853E-02   0.0           -1.154422E-02  -1.399905E-20
+             9      G     -1.757311E-19  -2.590878E-18   9.800962E-01   0.0           -1.625323E-02  -1.787512E-20
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    17
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  7.208415E+01
+          CYCLES =  1.351263E+00         R E A L   E I G E N V E C T O R   N O .          7
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -1.591089E-17   1.000000E+00   2.746953E-15   0.0            6.089900E-17  -1.528539E-02
+             2      G     -1.591771E-17   3.772146E-01   3.485612E-16   0.0            5.004347E-17  -1.419672E-02
+             3      G     -1.592111E-17   1.091340E-01  -5.260562E-16   0.0            3.724964E-17  -1.278790E-02
+             4      G     -1.592188E-17  -2.058893E-01  -1.240773E-15   0.0            1.270476E-17  -9.424364E-03
+             5      G     -1.592905E-17  -4.095359E-01  -1.222933E-15   0.0           -1.256417E-17  -4.430457E-03
+             6      G     -1.593408E-17  -4.543759E-01  -6.070308E-16   0.0           -2.646124E-17   1.387699E-03
+             7      G     -1.593864E-17  -3.312931E-01   1.651644E-16   0.0           -2.323275E-17   7.001167E-03
+             8      G     -1.594757E-17  -5.993547E-02   6.283618E-16   0.0           -7.097354E-18   1.154215E-02
+             9      G     -1.596558E-17   9.801369E-01  -5.885973E-17   0.0            1.776985E-17   1.625023E-02
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    18
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.532431E+02
+          CYCLES =  1.970201E+00         R E A L   E I G E N V E C T O R   N O .          8
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -4.203935E-16  -5.967148E-15   1.000000E+00   0.0            2.775570E-02   8.913984E-17
+             2      G     -4.204147E-16  -2.283050E-15  -6.896264E-02   0.0            2.090123E-02   8.693960E-17
+             3      G     -4.204218E-16  -5.980126E-16  -4.113309E-01   0.0            1.303672E-02   8.298357E-17
+             4      G     -4.204586E-16   1.551551E-15  -5.854308E-01   0.0           -9.785552E-04   6.817189E-17
+             5      G     -4.205489E-16   3.124099E-15  -3.593874E-01   0.0           -1.334115E-02   3.691792E-17
+             6      G     -4.206418E-16   3.544071E-15   1.123807E-01   0.0           -1.680918E-02  -1.133125E-17
+             7      G     -4.206863E-16   2.385547E-15   5.227965E-01   0.0           -9.451038E-03  -7.083859E-17
+             8      G     -4.207044E-16  -5.277207E-16   6.040339E-01   0.0            4.551413E-03  -1.299769E-16
+             9      G     -4.206789E-16  -1.295130E-14  -6.349839E-01   0.0            2.375569E-02  -1.978648E-16
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    19
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  4.534271E+02
+          CYCLES =  3.389018E+00         R E A L   E I G E N V E C T O R   N O .          9
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -7.996273E-16   1.000000E+00   9.564052E-14   0.0            5.174222E-15  -2.773793E-02
+             2      G     -7.992228E-16  -6.884280E-02  -8.029256E-14   0.0            2.052716E-15  -2.088993E-02
+             3      G     -7.993733E-16  -4.112818E-01  -9.155781E-14   0.0           -9.210245E-16  -1.303258E-02
+             4      G     -8.003018E-16  -5.855388E-01  -1.876348E-14   0.0           -3.563701E-15   9.709857E-04
+             5      G     -8.021333E-16  -3.595168E-01   8.055536E-14   0.0           -2.249674E-15   1.332432E-02
+             6      G     -8.031095E-16   1.123745E-01   8.990639E-14   0.0            1.714813E-15   1.679060E-02
+             7      G     -8.048882E-16   5.228944E-01  -3.083520E-15   0.0            3.761947E-15   9.439019E-03
+             8      G     -8.040755E-16   6.041307E-01  -9.340539E-14   0.0            1.580467E-15  -4.551928E-03
+             9      G     -8.012009E-16  -6.350680E-01   4.367834E-14   0.0           -3.623290E-15  -2.374061E-02
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    20
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  6.019545E+02
+          CYCLES =  3.904829E+00         R E A L   E I G E N V E C T O R   N O .         10
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -9.587088E-15  -3.362237E-13   1.000000E+00   0.0            4.761481E-02   9.524855E-15
+             2      G     -9.594303E-15   2.614873E-14  -6.417812E-01   0.0            2.068975E-02   6.803404E-15
+             3      G     -9.600973E-15   1.332034E-13  -7.970501E-01   0.0           -5.131299E-03   3.807830E-15
+             4      G     -9.615119E-15   1.721937E-13  -2.365806E-01   0.0           -2.897741E-02  -9.962268E-16
+             5      G     -9.635567E-15   8.366580E-14   5.950061E-01   0.0           -1.951024E-02  -4.498858E-15
+             6      G     -9.658862E-15  -6.148426E-14   7.054518E-01   0.0            1.299462E-02  -4.745613E-15
+             7      G     -9.681710E-15  -1.665536E-13  -3.322809E-02   0.0            3.025793E-02  -2.041119E-15
+             8      G     -9.699872E-15  -1.692867E-13  -7.631482E-01   0.0            1.276765E-02   1.909182E-15
+             9      G     -9.727779E-15   2.047744E-13   3.559037E-01   0.0           -2.951387E-02   6.911545E-15
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    21
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.778778E+03
+          CYCLES =  6.712450E+00         R E A L   E I G E N V E C T O R   N O .         11
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -1.417887E-14   1.000000E+00   8.954213E-13   0.0            6.394351E-14  -4.753828E-02
+             2      G     -1.424178E-14  -6.414739E-01  -1.017968E-12   0.0            4.768450E-15  -2.067384E-02
+             3      G     -1.430817E-14  -7.970443E-01  -6.106123E-13   0.0           -3.863624E-14   5.091794E-03
+             4      G     -1.445798E-14  -2.369245E-01   6.829188E-13   0.0           -2.990965E-14   2.889743E-02
+             5      G     -1.465608E-14   5.949436E-01   6.632684E-13   0.0            2.975411E-14   1.946744E-02
+             6      G     -1.484593E-14   7.056001E-01  -5.560885E-13   0.0            2.901634E-14  -1.295720E-02
+             7      G     -1.501266E-14  -3.318660E-02  -5.875816E-13   0.0           -2.518347E-14  -3.018102E-02
+             8      G     -1.513535E-14  -7.631435E-01   4.934398E-13   0.0           -2.836888E-14  -1.273063E-02
+             9      G     -1.524788E-14   3.558981E-01  -9.771174E-14   0.0            2.591513E-14   2.945505E-02
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    22
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.847336E+03
+          CYCLES =  6.840582E+00         R E A L   E I G E N V E C T O R   N O .         12
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -3.471432E-14   1.257718E-12  -7.148800E-01   0.0           -5.914449E-02  -5.975616E-14
+             2      G     -3.482457E-14  -8.024332E-13   1.000000E+00   0.0           -7.381055E-05  -2.573294E-14
+             3      G     -3.495059E-14  -9.910487E-13   5.065683E-01   0.0            4.186977E-02   6.779735E-15
+             4      G     -3.524353E-14  -2.758008E-13  -8.017969E-01   0.0            2.652151E-02   3.677353E-14
+             5      G     -3.561863E-14   7.824903E-13  -5.890246E-01   0.0           -3.737216E-02   2.476882E-14
+             6      G     -3.592264E-14   9.217098E-13   7.864525E-01   0.0           -2.949252E-02  -1.671073E-14
+             7      G     -3.614763E-14  -3.227946E-14   6.645132E-01   0.0            3.500724E-02  -3.919294E-14
+             8      G     -3.630287E-14  -9.899894E-13  -7.231680E-01   0.0            3.507230E-02  -1.721763E-14
+             9      G     -3.634047E-14   3.739198E-13   1.948165E-01   0.0           -3.595513E-02   3.671019E-14
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    23
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    24
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -6.064482E-12
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1    -9.536743E-07 -9.536743E-07   4.010200E-06 -5.917549E-06  -1.192093E-07  1.192093E-07   0.0            0.0
+            2     1.144409E-05 -3.814697E-06   1.144409E-05 -1.320839E-05   0.0           4.768372E-07   4.882813E-04   0.0
+            3     5.722046E-06 -1.335144E-05   2.897859E-05 -3.384352E-06  -8.344650E-07 -3.576279E-07   4.882813E-04   0.0
+            4     2.956390E-05 -3.814697E-06   3.642082E-05 -3.814697E-06  -2.384186E-07  0.0            2.441406E-04   0.0
+            5     3.623962E-05 -3.814697E-06   2.938271E-05 -3.862381E-07   2.384186E-07 -1.192093E-07   9.765625E-04   0.0
+            6     2.956390E-05 -9.536743E-07   2.099276E-05  7.605553E-07   2.980232E-07 -5.960464E-08   0.0            0.0
+            7     2.288818E-05 -1.907349E-06   2.974510E-05 -1.907349E-06  -2.384186E-07  0.0           -4.882813E-04   0.0
+            8     2.807379E-05 -4.291534E-06   3.267079E-07  1.795590E-07   3.930181E-07 -6.332994E-08  -1.220703E-04   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    25
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -5.648815E-13
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1    -9.536743E-07 -1.220703E-04  -8.399486E-06  1.956177E-04   1.788139E-07 -7.629395E-06   0.0            0.0
+            2    -1.239777E-05  7.324219E-04  -1.239777E-05  1.934814E-03   0.0          -6.103516E-05  -1.907349E-06   0.0
+            3    -1.525879E-05  4.882813E-04  -1.193643E-05  1.338806E-03  -1.192093E-07 -3.051758E-05  -2.861023E-06   0.0
+            4    -1.716614E-05  9.765625E-04  -1.716614E-05  9.765625E-04   0.0           0.0           -1.907349E-06   0.0
+            5    -1.907349E-05  6.103516E-04   1.497269E-06  3.909302E-04  -7.152557E-07  7.629395E-06  -9.536743E-07   0.0
+            6     0.0           2.441406E-04  -6.856918E-06  2.441406E-04   2.384186E-07  0.0            0.0            0.0
+            7    -7.629395E-06  1.831055E-04   6.084442E-06 -3.631592E-05  -4.768372E-07  7.629395E-06   1.907349E-06   0.0
+            8     1.525879E-05  9.155273E-05   2.634525E-06  2.422333E-05   1.788139E-07  9.536743E-07   0.0            0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    26
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -2.593481E-13
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     0.0           1.525879E-05  -9.927749E-06  1.525879E-05   2.384186E-07  0.0           -4.768372E-07   0.0
+            2     1.525879E-05  6.103516E-05  -2.231598E-05  6.103516E-05   1.907349E-06  0.0            1.907349E-06   0.0
+            3     0.0           6.103516E-05  -2.657890E-05  1.407719E-04   9.536743E-07 -2.861023E-06   1.430511E-06   0.0
+            4     0.0           9.918213E-05  -1.097107E-04  4.432678E-05   3.814697E-06  1.907349E-06   0.0            0.0
+            5    -1.220703E-04  3.814697E-05  -6.721497E-05  2.443314E-05  -1.907349E-06  4.768372E-07   1.430511E-06   0.0
+            6    -1.220703E-04  2.765656E-05  -1.235962E-05  1.051426E-05  -3.814697E-06  5.960464E-07   0.0            0.0
+            7    -1.220703E-04  1.144409E-05  -1.235962E-05  4.587173E-06  -3.814697E-06  2.384186E-07   0.0            0.0
+            8    -1.220703E-04 -3.814697E-06  -2.107620E-05  4.601478E-06  -1.430511E-06 -1.192093E-07   0.0            0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    27
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  4.263256E-14
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     0.0           0.0            1.861453E-06  0.0           -4.470348E-08  0.0            2.235174E-08   0.0
+            2     1.907349E-06  1.220703E-04  -2.789497E-06 -4.791260E-04   2.384186E-07  3.051758E-05  -1.490116E-08   0.0
+            3     0.0          -3.051758E-04  -6.644726E-06 -4.646492E-04   2.384186E-07  5.722046E-06   0.0            0.0
+            4    -7.629395E-06 -2.593994E-04  -7.629395E-06 -2.593994E-04   0.0           0.0            1.490116E-08   0.0
+            5    -1.144409E-05 -2.441406E-04  -2.172947E-05  8.499146E-05   3.576279E-07 -1.144409E-05   2.235174E-08   0.0
+            6    -1.525879E-05  0.0           -2.211571E-05  0.0            2.384186E-07  0.0            0.0            0.0
+            7    -1.907349E-05  0.0           -1.907349E-05 -2.194214E-04   0.0           7.629395E-06  -2.235174E-08   0.0
+            8    -1.907349E-05 -6.103516E-05  -1.370907E-07  7.362365E-05  -2.682209E-07 -1.907349E-06   1.862645E-08   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    28
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  7.815970E-13
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     6.103516E-05  0.0            6.103516E-05  4.963875E-06   0.0          -1.192093E-07  -9.536743E-07   0.0
+            2     2.441406E-04  5.722046E-06  -5.645752E-05  1.041889E-05   1.525879E-05 -2.384186E-07   1.907349E-06   0.0
+            3     6.103516E-05  1.239777E-05  -1.515961E-04  1.239777E-05   7.629395E-06  0.0            5.722046E-06   0.0
+            4    -2.136230E-04  1.215935E-05  -2.136230E-04  1.215935E-05   0.0           0.0            3.814697E-06   0.0
+            5    -2.746582E-04  1.049042E-05  -3.295135E-04  1.049042E-05   1.907349E-06  0.0            3.814697E-06   0.0
+            6    -2.746582E-04  7.629395E-06  -3.020859E-04  7.629395E-06   9.536743E-07  0.0            0.0            0.0
+            7    -2.708435E-04  1.335144E-05  -1.817036E-04  6.494522E-06  -3.099442E-06  2.384186E-07  -3.814697E-06   0.0
+            8    -1.564026E-04  9.536743E-06  -1.332760E-05 -9.834766E-07  -2.026558E-06  1.490116E-07  -9.536743E-07   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    29
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  2.434479E+01
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     6.103516E-05 -1.058791E-22   5.234367E+09  8.069232E-09  -1.257053E+08 -1.937856E-10  -9.122487E-12   0.0
+            2     5.234367E+09  8.069232E-09   9.082951E+09  1.512069E-08  -1.953596E+08 -3.579423E-10  -9.742814E-12   0.0
+            3     9.082951E+09  1.512069E-08   1.507866E+10  2.730807E-08  -2.151313E+08 -4.372936E-10  -1.611831E-11   0.0
+            4     1.507866E+10  2.730807E-08   1.968389E+10  3.896802E-08  -1.601264E+08 -4.054225E-10  -1.171114E-12   0.0
+            5     1.968389E+10  3.896802E-08   2.081596E+10  4.353313E-08  -3.936256E+07 -1.587311E-10   2.296707E-12   0.0
+            6     2.081596E+10  4.353313E-08   1.825907E+10  4.041037E-08   8.890427E+07  1.085797E-10  -3.032087E-12   0.0
+            7     1.825907E+10  4.041037E-08   1.335059E+10  3.254621E-08   1.706705E+08  2.734411E-10   2.947659E-12   0.0
+            8     1.335059E+10  3.254621E-08   1.716614E-05  0.0            1.891018E+08  4.609944E-10   7.023880E-13   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    30
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  7.208415E+01
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     0.0          -1.831055E-04   5.218144E-05 -1.549880E+10  -1.253157E-06  3.722093E+08  -7.515227E-09   0.0
+            2     5.218144E-05 -1.549880E+10   7.780867E-05 -2.689479E+10  -1.300875E-06  5.784771E+08  -7.911350E-09   0.0
+            3     7.780867E-05 -2.689479E+10   9.847010E-05 -4.464908E+10  -7.413504E-07  6.370393E+08  -1.274790E-09   0.0
+            4     9.847010E-05 -4.464908E+10   7.739264E-05 -5.828626E+10   7.328745E-07  4.741717E+08  -1.143468E-08   0.0
+            5     7.739264E-05 -5.828626E+10   1.932606E-05 -6.163866E+10   2.019005E-06  1.165645E+08  -8.021729E-09   0.0
+            6     1.932606E-05 -6.163866E+10  -4.179517E-05 -5.406719E+10   2.125216E-06 -2.632638E+08  -7.268947E-09   0.0
+            7    -4.179517E-05 -5.406719E+10  -7.050150E-05 -3.953231E+10   9.981338E-07 -5.053852E+08  -1.425679E-08   0.0
+            8    -7.050150E-05 -3.953231E+10  -1.355253E-20 -2.288818E-05  -9.986047E-07 -5.599477E+08  -1.170420E-08   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    31
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.532431E+02
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1    -1.525879E-05 -4.336809E-19   3.294875E+10  3.132366E-05  -7.912765E+08 -7.522492E-07  -2.335871E-08   0.0
+            2     3.294875E+10  3.132366E-05   4.695760E+10  8.772011E-05  -7.111091E+08 -2.862764E-06  -1.646281E-08   0.0
+            3     4.695760E+10  8.772011E-05   5.369865E+10  2.273306E-04  -2.418749E+08 -5.009346E-06  -6.054454E-08   0.0
+            4     5.369865E+10  2.273306E-04   3.234064E+10  4.168820E-04   7.426293E+08 -6.590800E-06  -1.440362E-07   0.0
+            5     3.234064E+10  4.168820E-04  -8.204385E+09  5.776388E-04   1.409771E+09 -5.589597E-06  -1.482360E-07   0.0
+            6    -8.204385E+09  5.776388E-04  -4.300568E+10  6.489376E-04   1.210059E+09 -2.479095E-06  -7.105582E-08   0.0
+            7    -4.300568E+10  6.489376E-04  -5.444641E+10  5.700332E-04   3.978001E+08  2.743548E-06  -2.881276E-08   0.0
+            8    -5.444641E+10  5.700332E-04  -2.288818E-05 -9.757820E-19  -7.711956E+08  8.074124E-06   1.657399E-08   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    32
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  4.534271E+02
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1    -6.938894E-18  2.441406E-04   1.500478E-02 -9.749125E+10  -3.603453E-04  2.341288E+09   4.456345E-07   0.0
+            2     1.500478E-02 -9.749125E+10   1.520954E-02 -1.389498E+11  -1.039391E-05  2.104495E+09  -3.504145E-07   0.0
+            3     1.520954E-02 -1.389498E+11   3.769889E-03 -1.589118E+11   4.104646E-04  7.162556E+08  -1.528605E-06   0.0
+            4     3.769889E-03 -1.589118E+11  -1.291505E-02 -9.571729E+10   5.801439E-04 -2.197307E+09  -2.921863E-06   0.0
+            5    -1.291505E-02 -9.571729E+10  -1.467638E-02  2.426963E+10   6.124220E-05 -4.172007E+09  -1.557423E-06   0.0
+            6    -1.467638E-02  2.426963E+10   4.290525E-04  1.272625E+11  -5.252236E-04 -3.581116E+09  -2.837661E-06   0.0
+            7     4.290525E-04  1.272625E+11   1.475327E-02  1.611215E+11  -4.980605E-04 -1.177293E+09   1.296546E-06   0.0
+            8     1.475327E-02  1.611215E+11   0.0           3.051758E-05   2.089699E-04  2.282174E+09   1.868132E-06   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    33
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  6.019545E+02
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     9.155273E-05  0.0            1.294261E+11  3.874384E-02  -3.108215E+09 -9.304478E-04  -7.949798E-06   0.0
+            2     1.294261E+11  3.874384E-02   1.329255E+11  5.139806E-02  -1.776340E+08 -6.423461E-04  -1.553458E-05   0.0
+            3     1.329255E+11  5.139806E-02   3.833473E+10  5.078621E-02   3.393999E+09  2.195381E-05  -2.328830E-05   0.0
+            4     3.833473E+10  5.078621E-02  -1.042229E+11  2.141067E-02   4.956801E+09  1.021403E-03  -3.262318E-05   0.0
+            5    -1.042229E+11  2.141067E-02  -1.219994E+11 -1.632451E-02   6.181010E+08  1.312072E-03  -3.716393E-05   0.0
+            6    -1.219994E+11 -1.632451E-02   1.852986E+09 -3.942102E-02  -4.306413E+09  8.030774E-04  -3.645059E-05   0.0
+            7     1.852986E+09 -3.942102E-02   1.198731E+11 -4.200330E-02  -4.103621E+09  8.978746E-05  -2.897475E-05   0.0
+            8     1.198731E+11 -4.200330E-02   1.525879E-05 -2.081668E-17   1.697920E+09 -5.949477E-04  -1.813584E-05   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    34
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.778778E+03
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1    -1.110223E-16 -2.441406E-04   2.844487E-01 -3.824547E+11  -6.831141E-03  9.184791E+09  -6.931785E-05   0.0
+            2     2.844487E-01 -3.824547E+11   1.565592E-01 -3.928770E+11   6.491852E-03  5.290543E+08  -1.546199E-04   0.0
+            3     1.565592E-01 -3.928770E+11  -2.192327E-01 -1.134787E+11   1.348374E-02 -1.002506E+10  -2.466350E-04   0.0
+            4    -2.192327E-01 -1.134787E+11  -1.960059E-01  3.078513E+11  -8.076053E-04 -1.464986E+10  -3.160377E-04   0.0
+            5    -1.960059E-01  3.078513E+11   2.011406E-01  3.604915E+11  -1.380899E-02 -1.830326E+09  -3.028876E-04   0.0
+            6     2.011406E-01  3.604915E+11   1.760709E-01 -5.470769E+09   8.716849E-04  1.272470E+10  -2.659935E-04   0.0
+            7     1.760709E-01 -5.470769E+09  -1.539016E-01 -3.542201E+11   1.147331E-02  1.212619E+10  -1.957344E-04   0.0
+            8    -1.539016E-01 -3.542201E+11   0.0           0.0           -2.179909E-03 -5.017282E+09  -7.312943E-05   0.0
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    35
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.847336E+03
+                                 F O R C E S   I N   B A R   E L E M E N T S         ( C B A R )
+0    ELEMENT         BEND-MOMENT END-A            BEND-MOMENT END-B                - SHEAR -               AXIAL
+       ID.         PLANE 1       PLANE 2        PLANE 1       PLANE 2        PLANE 1       PLANE 2         FORCE         TORQUE
+            1     0.0          -5.551115E-17  -2.839470E+11 -4.843705E-01   6.819091E+09  1.163234E-02  -1.214851E-04   0.0
+            2    -2.839470E+11 -4.843705E-01  -1.422156E+11 -4.939910E-01  -7.194487E+09  4.883481E-04  -2.934941E-04   0.0
+            3    -1.422156E+11 -4.939910E-01   2.524452E+11 -1.439895E-01  -1.416077E+10 -1.255836E-02  -4.822733E-04   0.0
+            4     2.524452E+11 -1.439895E-01   1.922320E+11  3.914329E-01   2.093643E+09 -1.861691E-02  -5.984068E-04   0.0
+            5     1.922320E+11  3.914329E-01  -2.470715E+11  4.635513E-01   1.527481E+10 -2.507595E-03  -4.850102E-04   0.0
+            6    -2.470715E+11  4.635513E-01  -2.018239E+11 -1.439124E-04  -1.573282E+09  1.612292E-02  -3.589383E-04   0.0
+            7    -2.018239E+11 -1.439124E-04   2.013712E+11 -4.528152E-01  -1.401930E+10  1.573962E-02  -2.476647E-04   0.0
+            8     2.013712E+11 -4.528152E-01  -3.051758E-05 -1.110223E-16   2.852283E+09 -6.413814E-03  -2.443920E-05   0.0
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    36
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    37
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -6.064482E-12
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    3.911211E-07  -7.580714E-08  -3.911211E-07   7.580714E-08   0.0            3.911211E-07  -3.911211E-07 
+            -3.455066E-09   1.959978E-06   3.455066E-09  -1.959978E-06                  1.959978E-06  -1.959978E-06 
+0       2   -2.170942E-06   3.432198E-06   2.170942E-06  -3.432198E-06   1.489882E-04   1.524204E-04   1.455560E-04 
+            -6.180203E-07   4.985119E-06   6.180203E-07  -4.985119E-06                  1.539733E-04   1.440030E-04 
+0       3    8.064130E-07   3.607983E-06  -8.064130E-07  -3.607983E-06   1.489882E-04   1.525961E-04   1.453802E-04 
+            -6.534614E-06   7.653585E-06   6.534614E-06  -7.653585E-06                  1.566417E-04   1.413346E-04 
+0       4   -6.606760E-06   7.868016E-06   6.606760E-06  -7.868016E-06   7.449408E-05   8.236209E-05   6.662606E-05 
+            -8.285368E-06   9.546623E-06   8.285368E-06  -9.546623E-06                  8.404070E-05   6.494745E-05 
+0       5   -8.241009E-06   9.502265E-06   8.241009E-06  -9.502265E-06   2.979763E-04   3.074786E-04   2.884741E-04 
+            -7.129179E-06   7.256881E-06   7.129179E-06  -7.256881E-06                  3.052332E-04   2.907194E-04 
+0       6   -7.079731E-06   7.395045E-06   7.079731E-06  -7.395045E-06   0.0            7.395045E-06  -7.395045E-06 
+            -5.264861E-06   5.013398E-06   5.264861E-06  -5.013398E-06                  5.264861E-06  -5.264861E-06 
+0       7   -5.287825E-06   5.918453E-06   5.287825E-06  -5.918453E-06  -1.489882E-04  -1.430697E-04  -1.549066E-04 
+            -6.966432E-06   7.597060E-06   6.966432E-06  -7.597060E-06                 -1.413911E-04  -1.565852E-04 
+0       8   -6.163144E-06   7.582057E-06   6.163144E-06  -7.582057E-06  -3.724704E-05  -2.966498E-05  -4.482910E-05 
+            -1.096636E-07   5.029585E-08   1.096636E-07  -5.029585E-08                 -3.713738E-05  -3.735670E-05 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    38
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -5.648815E-13
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    2.041356E-05   1.994663E-05  -2.041356E-05  -1.994663E-05   0.0            2.041356E-05  -2.041356E-05 
+            -3.028237E-05  -3.439484E-05   3.028237E-05   3.439484E-05                  3.439484E-05  -3.439484E-05 
+0       2   -1.180455E-04  -1.241156E-04   1.180455E-04   1.241156E-04  -5.819850E-07   1.235336E-04  -1.246976E-04 
+            -3.168195E-04  -3.228895E-04   3.168195E-04   3.228895E-04                  3.223075E-04  -3.234715E-04 
+0       3   -7.698495E-05  -8.445580E-05   7.698495E-05   8.445580E-05  -8.729775E-07   8.358283E-05  -8.532879E-05 
+            -2.184031E-04  -2.242473E-04   2.184031E-04   2.242473E-04                  2.233743E-04  -2.251203E-04 
+0       4   -1.572384E-04  -1.656431E-04   1.572384E-04   1.656431E-04  -5.819850E-07   1.650611E-04  -1.662251E-04 
+            -1.572384E-04  -1.656431E-04   1.572384E-04   1.656431E-04                  1.650611E-04  -1.662251E-04 
+0       5   -9.623119E-05  -1.055698E-04   9.623119E-05   1.055698E-04  -2.909925E-07   1.052788E-04  -1.058608E-04 
+            -6.499329E-05  -6.426022E-05   6.499329E-05   6.426022E-05                  6.470230E-05  -6.528429E-05 
+0       6   -4.036019E-05  -4.036019E-05   4.036019E-05   4.036019E-05   0.0            4.036019E-05  -4.036019E-05 
+            -3.868158E-05  -4.203880E-05   3.868158E-05   4.203880E-05                  4.203880E-05  -4.203880E-05 
+0       7   -2.840243E-05  -3.213785E-05   2.840243E-05   3.213785E-05   5.819850E-07   3.271984E-05  -3.155587E-05 
+             4.514077E-06   7.493079E-06  -4.514077E-06  -7.493079E-06                  8.075064E-06  -6.911094E-06 
+0       8   -1.887050E-05  -1.139964E-05   1.887050E-05   1.139964E-05   0.0            1.887050E-05  -1.887050E-05 
+            -4.649432E-06  -3.359543E-06   4.649432E-06   3.359543E-06                  4.649432E-06  -4.649432E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    39
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE = -2.593481E-13
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1   -2.522512E-06  -2.522512E-06   2.522512E-06   2.522512E-06  -1.454962E-07   2.377016E-06  -2.668008E-06 
+            -9.215019E-08  -4.952873E-06   9.215019E-08   4.952873E-06                  4.807377E-06  -5.098370E-06 
+0       2   -1.382547E-05  -6.354621E-06   1.382547E-05   6.354621E-06   5.819850E-07   1.440746E-05  -1.324349E-05 
+            -4.626987E-06  -1.555311E-05   4.626987E-06   1.555311E-05                  1.613509E-05  -1.497112E-05 
+0       3   -1.009005E-05  -1.009005E-05   1.009005E-05   1.009005E-05   4.364887E-07   1.052654E-05  -9.653559E-06 
+            -1.676510E-05  -2.977839E-05   1.676510E-05   2.977839E-05                  3.021488E-05  -2.934191E-05 
+0       4   -1.639633E-05  -1.639633E-05   1.639633E-05   1.639633E-05   0.0            1.639633E-05  -1.639633E-05 
+             1.952982E-05  -3.418561E-05  -1.952982E-05   3.418561E-05                  3.418561E-05  -3.418561E-05 
+0       5    2.357713E-05  -3.618969E-05  -2.357713E-05   3.618969E-05   4.364887E-07   3.662618E-05  -3.575320E-05 
+             1.241538E-05  -2.049372E-05  -1.241538E-05   2.049372E-05                  2.093021E-05  -2.005724E-05 
+0       6    2.531136E-05  -3.445546E-05  -2.531136E-05   3.445546E-05   0.0            3.445546E-05  -3.445546E-05 
+             1.287527E-06  -4.763864E-06  -1.287527E-06   4.763864E-06                  4.763864E-06  -4.763864E-06 
+0       7    2.799153E-05  -3.177529E-05  -2.799153E-05   3.177529E-05   0.0            3.177529E-05  -3.177529E-05 
+             2.267365E-06  -3.784025E-06  -2.267365E-06   3.784025E-06                  3.784025E-06  -3.784025E-06 
+0       8    3.051404E-05  -2.925278E-05  -3.051404E-05   2.925278E-05   0.0            3.051404E-05  -3.051404E-05 
+             4.398863E-06  -5.920253E-06  -4.398863E-06   5.920253E-06                  5.920253E-06  -5.920253E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    40
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  4.263256E-14
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    0.0            0.0            0.0            0.0            6.820136E-09   6.820136E-09   6.820136E-09 
+            -4.556928E-07   4.556928E-07   4.556928E-07  -4.556928E-07                  4.625130E-07  -4.488727E-07 
+0       2   -2.064702E-05  -1.971317E-05   2.064702E-05   1.971317E-05  -4.546758E-09   2.064248E-05  -2.065157E-05 
+             7.988975E-05   7.852399E-05  -7.988975E-05  -7.852399E-05                  7.988521E-05  -7.989430E-05 
+0       3    5.045024E-05   5.045024E-05  -5.045024E-05  -5.045024E-05   0.0            5.045024E-05  -5.045024E-05 
+             7.844030E-05   7.518697E-05  -7.844030E-05  -7.518697E-05                  7.844030E-05  -7.844030E-05 
+0       4    4.475041E-05   4.101499E-05  -4.475041E-05  -4.101499E-05   4.546758E-09   4.475496E-05  -4.474587E-05 
+             4.475041E-05   4.101499E-05  -4.475041E-05  -4.101499E-05                  4.475496E-05  -4.474587E-05 
+0       5    4.316176E-05   3.755862E-05  -4.316176E-05  -3.755862E-05   6.820136E-09   4.316858E-05  -4.315494E-05 
+            -8.730911E-06  -1.936987E-05   8.730911E-06   1.936987E-05                  1.937669E-05  -1.936305E-05 
+0       6    3.735426E-06  -3.735426E-06  -3.735426E-06   3.735426E-06   0.0            3.735426E-06  -3.735426E-06 
+             5.414033E-06  -5.414033E-06  -5.414033E-06   5.414033E-06                  5.414033E-06  -5.414033E-06 
+0       7    4.669283E-06  -4.669283E-06  -4.669283E-06   4.669283E-06  -6.820136E-09   4.662463E-06  -4.676103E-06 
+             4.094300E-05   3.160444E-05  -4.094300E-05  -3.160444E-05                  4.093618E-05  -4.094982E-05 
+0       8    1.475933E-05   5.420765E-06  -1.475933E-05  -5.420765E-06   5.683447E-09   1.476501E-05  -1.475365E-05 
+            -1.213756E-05  -1.220468E-05   1.213756E-05   1.220468E-05                  1.221036E-05  -1.219900E-05 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    41
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  7.815970E-13
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1   -1.494170E-05   1.494170E-05   1.494170E-05  -1.494170E-05  -2.909925E-07   1.465071E-05  -1.523270E-05 
+            -1.576231E-05   1.412110E-05   1.576231E-05  -1.412110E-05                  1.547132E-05  -1.605330E-05 
+0       2   -6.071276E-05   5.882087E-05   6.071276E-05  -5.882087E-05   5.819850E-07   6.129475E-05  -6.013078E-05 
+             1.209867E-05  -1.554348E-05  -1.209867E-05   1.554348E-05                  1.612546E-05  -1.496149E-05 
+0       3   -1.699125E-05   1.289216E-05   1.699125E-05  -1.289216E-05   1.745955E-06   1.873720E-05  -1.524529E-05 
+             3.506192E-05  -3.916100E-05  -3.506192E-05   3.916100E-05                  4.090695E-05  -3.741504E-05 
+0       4    5.028584E-05  -5.430609E-05  -5.028584E-05   5.430609E-05   1.163970E-06   5.547006E-05  -5.314212E-05 
+             5.028584E-05  -5.430609E-05  -5.028584E-05   5.430609E-05                  5.547006E-05  -5.314212E-05 
+0       5    6.550345E-05  -6.897189E-05  -6.550345E-05   6.897189E-05   1.163970E-06   7.013587E-05  -6.780793E-05 
+             7.893230E-05  -8.240076E-05  -7.893230E-05   8.240076E-05                  8.356472E-05  -8.123679E-05 
+0       6    6.597641E-05  -6.849893E-05  -6.597641E-05   6.849893E-05   0.0            6.849893E-05  -6.849893E-05 
+             7.269084E-05  -7.521336E-05  -7.269084E-05   7.521336E-05                  7.521336E-05  -7.521336E-05 
+0       7    6.409662E-05  -6.851101E-05  -6.409662E-05   6.851101E-05  -1.163970E-06   6.734704E-05  -6.967498E-05 
+             4.340828E-05  -4.555557E-05  -4.340828E-05   4.555557E-05                  4.439160E-05  -4.671954E-05 
+0       8    3.671155E-05  -3.986469E-05  -3.671155E-05   3.986469E-05  -2.909925E-07   3.957370E-05  -4.015568E-05 
+             3.425245E-06  -3.100077E-06  -3.425245E-06   3.100077E-06                  3.134253E-06  -3.716238E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    42
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  2.434479E+01
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1   -1.494170E-05   1.494170E-05   1.494170E-05  -1.494170E-05  -2.783524E-12   1.494170E-05  -1.494171E-05 
+            -1.281399E+09   1.281399E+09   1.281399E+09  -1.281399E+09                  1.281399E+09  -1.281399E+09 
+0       2   -1.281399E+09   1.281399E+09   1.281399E+09  -1.281399E+09  -2.972803E-12   1.281399E+09  -1.281399E+09 
+            -2.223551E+09   2.223551E+09   2.223551E+09  -2.223551E+09                  2.223551E+09  -2.223551E+09 
+0       3   -2.223551E+09   2.223551E+09   2.223551E+09  -2.223551E+09  -4.918144E-12   2.223551E+09  -2.223551E+09 
+            -3.691330E+09   3.691330E+09   3.691330E+09  -3.691330E+09                  3.691330E+09  -3.691330E+09 
+0       4   -3.691330E+09   3.691330E+09   3.691330E+09  -3.691330E+09  -3.573393E-13   3.691330E+09  -3.691330E+09 
+            -4.818713E+09   4.818713E+09   4.818713E+09  -4.818713E+09                  4.818713E+09  -4.818713E+09 
+0       5   -4.818713E+09   4.818713E+09   4.818713E+09  -4.818713E+09   7.007889E-13   4.818713E+09  -4.818713E+09 
+            -5.095849E+09   5.095849E+09   5.095849E+09  -5.095849E+09                  5.095849E+09  -5.095849E+09 
+0       6   -5.095849E+09   5.095849E+09   5.095849E+09  -5.095849E+09  -9.251738E-13   5.095849E+09  -5.095849E+09 
+            -4.469911E+09   4.469911E+09   4.469911E+09  -4.469911E+09                  4.469911E+09  -4.469911E+09 
+0       7   -4.469911E+09   4.469911E+09   4.469911E+09  -4.469911E+09   8.994124E-13   4.469911E+09  -4.469911E+09 
+            -3.268289E+09   3.268289E+09   3.268289E+09  -3.268289E+09                  3.268289E+09  -3.268289E+09 
+0       8   -3.268289E+09   3.268289E+09   3.268289E+09  -3.268289E+09   2.143181E-13   3.268289E+09  -3.268289E+09 
+            -4.202354E-06   4.202354E-06   4.202354E-06  -4.202354E-06                  4.202355E-06  -4.202354E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    43
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  7.208415E+01
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    3.027014E-05   3.027014E-05  -3.027014E-05  -3.027014E-05  -2.293104E-09   3.026785E-05  -3.027243E-05 
+             2.562189E+09   2.562189E+09  -2.562189E+09  -2.562189E+09                  2.562189E+09  -2.562189E+09 
+0       2    2.562189E+09   2.562189E+09  -2.562189E+09  -2.562189E+09  -2.413972E-09   2.562189E+09  -2.562189E+09 
+             4.446122E+09   4.446122E+09  -4.446122E+09  -4.446122E+09                  4.446122E+09  -4.446122E+09 
+0       3    4.446122E+09   4.446122E+09  -4.446122E+09  -4.446122E+09  -3.889738E-10   4.446122E+09  -4.446122E+09 
+             7.381178E+09   7.381178E+09  -7.381178E+09  -7.381178E+09                  7.381178E+09  -7.381178E+09 
+0       4    7.381178E+09   7.381178E+09  -7.381178E+09  -7.381178E+09  -3.489037E-09   7.381178E+09  -7.381178E+09 
+             9.635613E+09   9.635613E+09  -9.635613E+09  -9.635613E+09                  9.635613E+09  -9.635613E+09 
+0       5    9.635613E+09   9.635613E+09  -9.635613E+09  -9.635613E+09  -2.447652E-09   9.635613E+09  -9.635613E+09 
+             1.018981E+10   1.018981E+10  -1.018981E+10  -1.018981E+10                  1.018981E+10  -1.018981E+10 
+0       6    1.018981E+10   1.018981E+10  -1.018981E+10  -1.018981E+10  -2.217958E-09   1.018981E+10  -1.018981E+10 
+             8.938136E+09   8.938136E+09  -8.938136E+09  -8.938136E+09                  8.938136E+09  -8.938136E+09 
+0       7    8.938136E+09   8.938136E+09  -8.938136E+09  -8.938136E+09  -4.350142E-09   8.938136E+09  -8.938136E+09 
+             6.535297E+09   6.535297E+09  -6.535297E+09  -6.535297E+09                  6.535297E+09  -6.535297E+09 
+0       8    6.535297E+09   6.535297E+09  -6.535297E+09  -6.535297E+09  -3.571277E-09   6.535297E+09  -6.535297E+09 
+             3.783768E-06   3.783768E-06  -3.783768E-06  -3.783768E-06                  3.780196E-06  -3.787339E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    44
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.532431E+02
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    3.735426E-06  -3.735426E-06  -3.735426E-06   3.735426E-06  -7.127390E-09   3.728299E-06  -3.742554E-06 
+            -8.066016E+09   8.066016E+09   8.066016E+09  -8.066016E+09                  8.066016E+09  -8.066016E+09 
+0       2   -8.066016E+09   8.066016E+09   8.066016E+09  -8.066016E+09  -5.023260E-09   8.066016E+09  -8.066016E+09 
+            -1.149545E+10   1.149545E+10   1.149545E+10  -1.149545E+10                  1.149545E+10  -1.149545E+10 
+0       3   -1.149545E+10   1.149545E+10   1.149545E+10  -1.149545E+10  -1.847382E-08   1.149545E+10  -1.149545E+10 
+            -1.314569E+10   1.314569E+10   1.314569E+10  -1.314569E+10                  1.314569E+10  -1.314569E+10 
+0       4   -1.314569E+10   1.314569E+10   1.314569E+10  -1.314569E+10  -4.394942E-08   1.314569E+10  -1.314569E+10 
+            -7.917146E+09   7.917146E+09   7.917146E+09  -7.917146E+09                  7.917146E+09  -7.917146E+09 
+0       5   -7.917146E+09   7.917146E+09   7.917146E+09  -7.917146E+09  -4.523093E-08   7.917146E+09  -7.917146E+09 
+             2.008473E+09  -2.008473E+09  -2.008473E+09   2.008473E+09                  2.008473E+09  -2.008473E+09 
+0       6    2.008473E+09  -2.008473E+09  -2.008473E+09   2.008473E+09  -2.168110E-08   2.008473E+09  -2.008473E+09 
+             1.052800E+10  -1.052800E+10  -1.052800E+10   1.052800E+10                  1.052800E+10  -1.052800E+10 
+0       7    1.052800E+10  -1.052800E+10  -1.052800E+10   1.052800E+10  -8.791574E-09   1.052800E+10  -1.052800E+10 
+             1.332875E+10  -1.332875E+10  -1.332875E+10   1.332875E+10                  1.332875E+10  -1.332875E+10 
+0       8    1.332875E+10  -1.332875E+10  -1.332875E+10   1.332875E+10   5.057183E-09   1.332875E+10  -1.332875E+10 
+             5.603139E-06  -5.603139E-06  -5.603139E-06   5.603139E-06                  5.608196E-06  -5.598082E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    45
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  4.534271E+02
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1   -4.036019E-05  -4.036019E-05   4.036019E-05   4.036019E-05   1.359755E-07   4.049616E-05  -4.022421E-05 
+             1.611680E+10   1.611680E+10  -1.611680E+10  -1.611680E+10                  1.611680E+10  -1.611680E+10 
+0       2    1.611680E+10   1.611680E+10  -1.611680E+10  -1.611680E+10  -1.069212E-07   1.611680E+10  -1.611680E+10 
+             2.297053E+10   2.297053E+10  -2.297053E+10  -2.297053E+10                  2.297053E+10  -2.297053E+10 
+0       3    2.297053E+10   2.297053E+10  -2.297053E+10  -2.297053E+10  -4.664198E-07   2.297053E+10  -2.297053E+10 
+             2.627056E+10   2.627056E+10  -2.627056E+10  -2.627056E+10                  2.627056E+10  -2.627056E+10 
+0       4    2.627056E+10   2.627056E+10  -2.627056E+10  -2.627056E+10  -8.915416E-07   2.627056E+10  -2.627056E+10 
+             1.582354E+10   1.582354E+10  -1.582354E+10  -1.582354E+10                  1.582354E+10  -1.582354E+10 
+0       5    1.582354E+10   1.582354E+10  -1.582354E+10  -1.582354E+10  -4.752130E-07   1.582354E+10  -1.582354E+10 
+            -4.012142E+09  -4.012142E+09   4.012142E+09   4.012142E+09                  4.012142E+09  -4.012142E+09 
+0       6   -4.012142E+09  -4.012142E+09   4.012142E+09   4.012142E+09  -8.658492E-07   4.012142E+09  -4.012142E+09 
+            -2.103845E+10  -2.103845E+10   2.103845E+10   2.103845E+10                  2.103845E+10  -2.103845E+10 
+0       7   -2.103845E+10  -2.103845E+10   2.103845E+10   2.103845E+10   3.956121E-07   2.103845E+10  -2.103845E+10 
+            -2.663585E+10  -2.663585E+10   2.663585E+10   2.663585E+10                  2.663585E+10  -2.663585E+10 
+0       8   -2.663585E+10  -2.663585E+10   2.663585E+10   2.663585E+10   5.700188E-07   2.663585E+10  -2.663585E+10 
+            -5.045023E-06  -5.045023E-06   5.045023E-06   5.045023E-06                  5.615042E-06  -4.475005E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    46
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  6.019545E+02
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1   -2.241256E-05   2.241256E-05   2.241256E-05  -2.241256E-05  -2.425704E-06   1.998685E-05  -2.483826E-05 
+            -3.168414E+10   3.168414E+10   3.168414E+10  -3.168414E+10                  3.168414E+10  -3.168414E+10 
+0       2   -3.168414E+10   3.168414E+10   3.168414E+10  -3.168414E+10  -4.740030E-06   3.168414E+10  -3.168414E+10 
+            -3.254081E+10   3.254081E+10   3.254081E+10  -3.254081E+10                  3.254081E+10  -3.254081E+10 
+0       3   -3.254081E+10   3.254081E+10   3.254081E+10  -3.254081E+10  -7.105908E-06   3.254081E+10  -3.254081E+10 
+            -9.384530E+09   9.384530E+09   9.384530E+09  -9.384530E+09                  9.384530E+09  -9.384530E+09 
+0       4   -9.384530E+09   9.384530E+09   9.384530E+09  -9.384530E+09  -9.954238E-06   9.384530E+09  -9.384530E+09 
+             2.551426E+10  -2.551426E+10  -2.551426E+10   2.551426E+10                  2.551426E+10  -2.551426E+10 
+0       5    2.551426E+10  -2.551426E+10  -2.551426E+10   2.551426E+10  -1.133975E-05   2.551426E+10  -2.551426E+10 
+             2.986606E+10  -2.986606E+10  -2.986606E+10   2.986606E+10                  2.986606E+10  -2.986606E+10 
+0       6    2.986606E+10  -2.986606E+10  -2.986606E+10   2.986606E+10  -1.112209E-05   2.986606E+10  -2.986606E+10 
+            -4.536201E+08   4.536201E+08   4.536201E+08  -4.536201E+08                  4.536201E+08  -4.536201E+08 
+0       7   -4.536201E+08   4.536201E+08   4.536201E+08  -4.536201E+08  -8.841001E-06   4.536201E+08  -4.536201E+08 
+            -2.934553E+10   2.934553E+10   2.934553E+10  -2.934553E+10                  2.934553E+10  -2.934553E+10 
+0       8   -2.934553E+10   2.934553E+10   2.934553E+10  -2.934553E+10  -5.533749E-06   2.934553E+10  -2.934553E+10 
+            -3.735426E-06   3.735426E-06   3.735426E-06  -3.735426E-06                 -1.798323E-06  -9.269175E-06 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    47
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.778778E+03
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    4.036019E-05   4.036019E-05  -4.036019E-05  -4.036019E-05  -2.115080E-05   1.920939E-05  -6.151099E-05 
+             6.322563E+10   6.322563E+10  -6.322563E+10  -6.322563E+10                  6.322563E+10  -6.322563E+10 
+0       2    6.322563E+10   6.322563E+10  -6.322563E+10  -6.322563E+10  -4.717881E-05   6.322563E+10  -6.322563E+10 
+             6.494860E+10   6.494860E+10  -6.494860E+10  -6.494860E+10                  6.494860E+10  -6.494860E+10 
+0       3    6.494860E+10   6.494860E+10  -6.494860E+10  -6.494860E+10  -7.525519E-05   6.494860E+10  -6.494860E+10 
+             1.875976E+10   1.875976E+10  -1.875976E+10  -1.875976E+10                  1.875976E+10  -1.875976E+10 
+0       4    1.875976E+10   1.875976E+10  -1.875976E+10  -1.875976E+10  -9.643185E-05   1.875976E+10  -1.875976E+10 
+            -5.089254E+10  -5.089254E+10   5.089254E+10   5.089254E+10                  5.089254E+10  -5.089254E+10 
+0       5   -5.089254E+10  -5.089254E+10   5.089254E+10   5.089254E+10  -9.241942E-05   5.089254E+10  -5.089254E+10 
+            -5.959477E+10  -5.959477E+10   5.959477E+10   5.959477E+10                  5.959477E+10  -5.959477E+10 
+0       6   -5.959477E+10  -5.959477E+10   5.959477E+10   5.959477E+10  -8.116199E-05   5.959477E+10  -5.959477E+10 
+             9.044020E+08   9.044020E+08  -9.044020E+08  -9.044020E+08                  9.044020E+08  -9.044020E+08 
+0       7    9.044020E+08   9.044020E+08  -9.044020E+08  -9.044020E+08  -5.972399E-05   9.044020E+08  -9.044020E+08 
+             5.855801E+10   5.855801E+10  -5.855801E+10  -5.855801E+10                  5.855801E+10  -5.855801E+10 
+0       8    5.855801E+10   5.855801E+10  -5.855801E+10  -5.855801E+10  -2.231382E-05   5.855801E+10  -5.855801E+10 
+             0.0            0.0            0.0            0.0                          -2.231382E-05  -2.231382E-05 
+1   THIS IS A DEFAULT SUBCASE.                                                 JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    48
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+      EIGENVALUE =  1.847336E+03
+                                 S T R E S S E S   I N   B A R   E L E M E N T S          ( C B A R )
+  ELEMENT        SA1            SA2            SA3            SA4           AXIAL          SA-MAX         SA-MIN     M.S.-T
+    ID.          SB1            SB2            SB3            SB4           STRESS         SB-MAX         SB-MIN     M.S.-C
+0       1    9.176844E-18   9.176844E-18  -9.176844E-18  -9.176844E-18  -3.706847E-05  -3.706847E-05  -3.706847E-05 
+             6.951161E+10  -6.951161E+10  -6.951161E+10   6.951161E+10                  6.951161E+10  -6.951161E+10 
+0       2    6.951161E+10  -6.951161E+10  -6.951161E+10   6.951161E+10  -8.955319E-05   6.951161E+10  -6.951161E+10 
+             3.481507E+10  -3.481507E+10  -3.481507E+10   3.481507E+10                  3.481507E+10  -3.481507E+10 
+0       3    3.481507E+10  -3.481507E+10  -3.481507E+10   3.481507E+10  -1.471550E-04   3.481507E+10  -3.481507E+10 
+            -6.179982E+10   6.179982E+10   6.179982E+10  -6.179982E+10                  6.179982E+10  -6.179982E+10 
+0       4   -6.179982E+10   6.179982E+10   6.179982E+10  -6.179982E+10  -1.825905E-04   6.179982E+10  -6.179982E+10 
+            -4.705934E+10   4.705934E+10   4.705934E+10  -4.705934E+10                  4.705934E+10  -4.705934E+10 
+0       5   -4.705934E+10   4.705934E+10   4.705934E+10  -4.705934E+10  -1.479901E-04   4.705934E+10  -4.705934E+10 
+             6.048431E+10  -6.048431E+10  -6.048431E+10   6.048431E+10                  6.048431E+10  -6.048431E+10 
+0       6    6.048431E+10  -6.048431E+10  -6.048431E+10   6.048431E+10  -1.095220E-04   6.048431E+10  -6.048431E+10 
+             4.940749E+10  -4.940749E+10  -4.940749E+10   4.940749E+10                  4.940749E+10  -4.940749E+10 
+0       7    4.940749E+10  -4.940749E+10  -4.940749E+10   4.940749E+10  -7.556939E-05   4.940749E+10  -4.940749E+10 
+            -4.929665E+10   4.929665E+10   4.929665E+10  -4.929665E+10                  4.929665E+10  -4.929665E+10 
+0       8   -4.929665E+10   4.929665E+10   4.929665E+10  -4.929665E+10  -7.457078E-06   4.929665E+10  -4.929665E+10 
+             7.470852E-06  -7.470852E-06  -7.470852E-06   7.470852E-06                  1.377435E-08  -1.492793E-05 
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    49
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+1    MSC.NASTRAN JOB CREATED ON 04-JUL-14 AT 13:45:45                          JULY  16, 2015  MSC.NASTRAN  4/ 3/07   PAGE    50
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+ * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     30
+
+
+
+0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
+0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
+ --------------------------------------------------------------------------------------------------------------------------
+     0     0    1    1 '        '    T    T    T    T    T     T      F      T      0     F     -1            0           F
+0SEID = SUPERELEMENT ID.
+ PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
+ PROJ = PROJECT ID NUMBER.
+ VERS = VERSION ID.
+ APRCH = BLANK FOR STRUCTURAL ANALYSIS.  HEAT FOR HEAT TRANSFER ANALYSIS.
+ SEMG = STIFFNESS AND MASS MATRIX GENERATION STEP.
+ SEMR = MASS MATRIX REDUCTION STEP (INCLUDES EIGENVALUE SOLUTION FOR MODES).
+ SEKR = STIFFNESS MATRIX REDUCTION STEP.
+ SELG = LOAD MATRIX GENERATION STEP.
+ SELR = LOAD MATRIX REDUCTION STEP. 
+ MODES = T (TRUE) IF NORMAL MODES OR BUCKLING MODES CALCULATED.
+ DYNRED = T (TRUE) MEANS GENERALIZED DYNAMIC AND/OR COMPONENT MODE REDUCTION PERFORMED.
+ SOLLIN = T (TRUE) IF LINEAR SOLUTION EXISTS IN DATABASE.
+ PVALID = P-DISTRIBUTION ID OF P-VALUE FOR P-ELEMENTS
+ LOOPID = THE LAST LOOPID VALUE USED IN THE NONLINEAR ANALYSIS.  USEFUL FOR RESTARTS.
+ SOLNL = T (TRUE) IF NONLINEAR SOLUTION EXISTS IN DATABASE.
+ DESIGN CYCLE = THE LAST DESIGN CYCLE (ONLY VALID IN OPTIMIZATION).
+ SENSITIVITY = SENSITIVITY MATRIX GENERATION FLAG.
+ 
+ No PARAM values were set in the Control File.
+ 
+1                                        * * * END OF JOB * * *
+ 
+ 
