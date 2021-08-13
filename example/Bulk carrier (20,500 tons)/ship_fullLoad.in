@@ -73,3 +73,6 @@ SPRING
 RUDDER-PID
 0
 180.  -10.0    7.0   3.0    3.0    -0.0   -3.0   
+SECOND-ORDER-FORCE
+1           0           0           
+0           0  
