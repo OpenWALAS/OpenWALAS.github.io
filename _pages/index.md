@@ -92,7 +92,8 @@ The author always respects the intellectual property rights and labor achievemen
 
 ## Release History
 
-- **OpenWALAS-1.0** was released in September 2020.
+- **OpenWALAS-1.0-beta** was released in September 2020.
+- **OpenWALAS-1.0** was released in November 2021.
 
 ## References
 
