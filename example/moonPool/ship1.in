@@ -6,13 +6,13 @@ JOB WALAS
 "ship1_element.dudx"
 "ship1_nodeElement_free.wet"
 "ship1_nodeElement_control.wet"
-"ship1_slmParam.ini"
-2            0           1           -1           1           0           0           -6          6.0           0.1        
-0            0           -0.5          
-9       5.323   5.758   0           0           0           
-0           0           0           0
-0           1025        9.81        
-0           2
+"ship1_nodeElement_slmParam.ini"
+2           0           1           -1          1           0           0           -6          6           0.1         
+0           0           -0.5        
+9           5.323       5.758       0           0           0           
+0           0           0           0           
+0           1025        9.81        1500.
+0           2           
 1           42          
 0.1         0.2         0.3         0.4         0.5         0.6         
 0.7         0.8         0.9         1           1.1         1.2         
@@ -22,19 +22,25 @@ JOB WALAS
 3.1         3.2         3.3         3.4         3.5         3.6         
 3.7         3.8         3.9         4           4.1         4.2         
 1           6           
-0           30          60          90         120    180         
+0           30          60          90          120         180         
 200         
 0           0           0           
 0           1
-0.10           0.10           0.03           0.03           0.03           0.10           
-0
-0
-SPRING 
+0.1         0.1         0.03        0.03        0.03        0.1         
+0           
+0           -1         
+SPRING
 0         
-1e+04       1e+05       0           0           0           1e+7 
+100000      100000      0           0           0           1E+08       
 RUDDER-PID
-0
-180.  -10.0    7.0   3.0    3.0    -0.0   -3.0   
+0      
+2           -10         -2          3           3           0           -3         
 SECOND-ORDER-FORCE
-1           0           0           
-0           0  
+0           0           0           
+0           0           
+IRREGULAR-FREQUENCY
+0           
+AUTO-FREE-CONTROL
+0           1           
+STABILITY-CORRECTION
+0           0          
