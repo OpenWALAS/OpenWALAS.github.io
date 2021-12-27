@@ -1,0 +1,205 @@
+$ MSC.Nastran input file created on December  04, 2021 at 12:14:55 by
+$ Patran 2019
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Direct Text Input for Executive Control
+$ Normal Modes Analysis, Database
+SOL 103
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran job created on 22-Nov-21 at 13:24:50
+ECHO = NONE
+$ Using Nastran default values for RESVEC
+SUBCASE 1
+   SUBTITLE=Default
+   METHOD = 1
+   VECTOR(SORT1,REAL)=ALL
+   STRAIN(SORT1,REAL,VONMISES,STRCUR,BILIN)=ALL
+   SET 1 = 1,2
+   GPSTRESS = 1
+   GPFORCE=ALL
+   STRESS(SORT1,REAL,VONMISES,BILIN)=ALL
+   FORCE(SORT1,REAL,BILIN)=ALL
+   STRFIELD = ALL
+$ Direct Text Input for this Subcase
+OUTPUT(POST)
+SET 2 = ALL
+VOLUME 1 SET 2,PRINCIPAL,SYSTEM CORD 0
+SET 3 = ALL
+SURFACE 2 SET 3,FIBRE ALL,SYSTEM CORD 0,AXIS X1,NORMAL R,
+TOPOLOGICAL,BRANCH BREAK
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+PARAM    POST    1
+PARAM   PRTMAXIM YES
+EIGRL    1                       12      0                       MASS
+$ Elements and Element Properties for region : p2
+PBAR     1       1      6.456   12.     21.36
+        1.      1.      1.      1.      1.      1.      1.      1.
+        .2848   .1164
+$ Pset: "p2" will be imported as: "pbar.1"
+CBAR     17      1       17      18      0.      0.     1.
+CBAR     18      1       18      19      0.      0.     1.
+CBAR     19      1       19      20      0.      0.     1.
+CBAR     20      1       20      21      0.      0.     1.
+CBAR     21      1       21      22      0.      0.     1.
+CBAR     22      1       22      23      0.      0.     1.
+CBAR     23      1       23      24      0.      0.     1.
+CBAR     24      1       24      25      0.      0.     1.
+CBAR     25      1       25      26      0.      0.     1.
+CBAR     26      1       26      27      0.      0.     1.
+CBAR     27      1       27      28      0.      0.     1.
+CBAR     28      1       28      29      0.      0.     1.
+CBAR     29      1       29      30      0.      0.     1.
+CBAR     30      1       30      31      0.      0.     1.
+CBAR     31      1       31      32      0.      0.     1.
+CBAR     32      1       32      33      0.      0.     1.
+$ Elements and Element Properties for region : p3
+PBAR     2       1      5.501   9.905   16.45
+        1.      1.      1.      1.      1.      1.      1.      1.
+        .2402   .1151
+$ Pset: "p3" will be imported as: "pbar.2"
+CBAR     33      2       33      34      0.      0.     1.
+CBAR     34      2       34      35      0.      0.     1.
+CBAR     35      2       35      36      0.      0.     1.
+CBAR     36      2       36      37      0.      0.     1.
+CBAR     37      2       37      38      0.      0.     1.
+CBAR     38      2       38      39      0.      0.     1.
+$ Elements and Element Properties for region : p4
+PBAR     3       1      4.15    8.567   11.03
+        1.      1.      1.      1.      1.      1.      1.      1.
+        .2588   .1164
+$ Pset: "p4" will be imported as: "pbar.3"
+CBAR     39      3       39      40      0.      0.     1.
+CBAR     40      3       40      41      0.      0.     1.
+CBAR     41      3       41      42      0.      0.     1.
+CBAR     42      3       42      43      0.      0.     1.
+CBAR     43      3       43      44      0.      0.     1.
+CBAR     44      3       44      45      0.      0.     1.
+$ Elements and Element Properties for region : p5
+PBAR     4       1      1.473   6.495   6.948
+        1.      1.      1.      1.      1.      1.      1.      1.
+        .1981   .1288
+$ Pset: "p5" will be imported as: "pbar.4"
+CBAR     45      4       45      46      0.      0.     1.
+CBAR     46      4       46      47      0.      0.     1.
+CBAR     47      4       47      48      0.      0.     1.
+CBAR     48      4       48      49      0.      0.     1.
+CBAR     49      4       49      50      0.      0.     1.
+CBAR     50      4       50      51      0.      0.     1.
+$ Elements and Element Properties for region : p1
+PBAR     5       1      4.353   10.24   17.14
+        1.      1.      1.      1.      1.      1.      1.      1.
+        .291    .1102
+$ Pset: "p1" will be imported as: "pbar.5"
+CBAR     1       5       1       2       0.      0.     1.
+CBAR     2       5       2       3       0.      0.     1.
+CBAR     3       5       3       4       0.      0.     1.
+CBAR     4       5       4       5       0.      0.     1.
+CBAR     5       5       5       6       0.      0.     1.
+CBAR     6       5       6       7       0.      0.     1.
+CBAR     7       5       7       8       0.      0.     1.
+CBAR     8       5       8       9       0.      0.     1.
+CBAR     9       5       9       10      0.      0.     1.
+CBAR     10      5       10      11      0.      0.     1.
+CBAR     11      5       11      12      0.      0.     1.
+CBAR     12      5       12      13      0.      0.     1.
+CBAR     13      5       13      14      0.      0.     1.
+CBAR     14      5       14      15      0.      0.     1.
+CBAR     15      5       15      16      0.      0.     1.
+CBAR     16      5       16      17      0.      0.     1.
+$ Referenced Material Records
+$ Material Record : m1
+$ Description of Material : Date: 22-Nov-21           Time: 11:05:46
+MAT1     1      2.1+11  8.08+10 .3      7850.
+$ Nodes of the Entire Model
+GRID     1               0.      0.      0.
+GRID*    2                              2.45109367370606 0.
+*        0.
+GRID*    3                              4.90218734741211 0.
+*        0.
+GRID*    4                              7.35328102111816 0.
+*        0.
+GRID*    5                              9.80437469482422 0.
+*        0.
+GRID*    6                              12.2554683685303 0.
+*        0.
+GRID*    7                              14.7065620422363 0.
+*        0.
+GRID*    8                              17.1576557159424 0.
+*        0.
+GRID*    9                              19.6087493896484 0.
+*        0.
+GRID*    10                             22.0598430633545 0.
+*        0.
+GRID*    11                             24.5109367370606 0.
+*        0.
+GRID*    12                             26.9620304107666 0.
+*        0.
+GRID*    13                             29.4131240844727 0.
+*        0.
+GRID*    14                             31.8642177581787 0.
+*        0.
+GRID*    15                             34.3153114318848 0.
+*        0.
+GRID*    16                             36.7664031982422 0.
+*        0.
+GRID*    17                             39.2174987792969 0.
+*        0.
+GRID*    18                             41.6296882629395 0.
+*        0.
+GRID*    19                             44.0418739318848 0.
+*        0.
+GRID*    20                             46.4540634155273 0.
+*        0.
+GRID*    21                             48.8662490844727 0.
+*        0.
+GRID*    22                             51.2784385681152 0.
+*        0.
+GRID*    23                             53.6906242370606 0.
+*        0.
+GRID*    24                             56.1028137207031 0.
+*        0.
+GRID*    25                             58.5149993896484 0.
+*        0.
+GRID*    26                             60.927188873291  0.
+*        0.
+GRID*    27                             63.3393745422363 0.
+*        0.
+GRID*    28                             65.7515640258789 0.
+*        0.
+GRID*    29                             68.1637496948242 0.
+*        0.
+GRID*    30                             70.5759353637695 0.
+*        0.
+GRID*    31                             72.9881286621094 0.
+*        0.
+GRID*    32                             75.4003143310547 0.
+*        0.
+GRID     33             77.8125  0.      0.
+GRID     34             80.40625 0.      0.
+GRID     35             83.      0.      0.
+GRID     36             85.59375 0.      0.
+GRID     37             88.1875  0.      0.
+GRID     38             90.78125 0.      0.
+GRID     39             93.375   0.      0.
+GRID     40             95.96875 0.      0.
+GRID     41             98.5625  0.      0.
+GRID*    42                             101.15625        0.
+*        0.
+GRID     43             103.75   0.      0.
+GRID*    44                             106.34375        0.
+*        0.
+GRID     45             108.9375 0.      0.
+GRID*    46                             111.53125        0.
+*        0.
+GRID     47             114.125  0.      0.
+GRID*    48                             116.71875        0.
+*        0.
+GRID     49             119.3125 0.      0.
+GRID*    50                             121.90625        0.
+*        0.
+GRID     51             124.5    0.      0.
+$ Loads for Load Case : Default
+$ Referenced Coordinate Frames
+ENDDATA 9aae82dc
