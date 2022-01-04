@@ -11,7 +11,7 @@ title: Welcome to OpenWALAS
   <meta name="baidu-site-verification" content="Ivf7ppggHc" />
   <title>My title</title>
 </head>
-One new version is released in **December 29th, 2021**.
+One new version is released in **January 4th, 2022**.
 
 {% include busuanzi_statistics.html %}
 
@@ -93,7 +93,7 @@ The author always respects the intellectual property rights and labor achievemen
 
 ## Release History
 
-- **OpenWALAS-1.0** was released in December 2021.
+- **OpenWALAS-1.0** was released in January 2022.
 
 ## References
 
