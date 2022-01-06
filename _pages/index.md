@@ -11,7 +11,7 @@ title: Welcome to OpenWALAS
   <meta name="baidu-site-verification" content="Ivf7ppggHc" />
   <title>My title</title>
 </head>
-One new version is released in **January 5th, 2022**.
+One new version is released in **January 6th, 2022**.
 
 {% include busuanzi_statistics.html %}
 
