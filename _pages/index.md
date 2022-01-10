@@ -14,7 +14,7 @@ title: Welcome to OpenWALAS
 <<<<<<< HEAD
 One new version is released in **January 9th, 2022**.
 =======
-One new version is released in **January 10th, 2022**.
+One new version is released in **January 11th, 2022**.
 >>>>>>> 95117f01572d52b067c43a47da891536382b3820
 
 {% include busuanzi_statistics.html %}
