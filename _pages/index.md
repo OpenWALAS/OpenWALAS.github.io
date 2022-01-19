@@ -11,7 +11,7 @@ title: Welcome to OpenWALAS
   <meta name="baidu-site-verification" content="Ivf7ppggHc" />
   <title>My title</title>
 </head>
-One new version is released in **January 18th, 2022**.
+One new version is released in **January 19th, 2022**.
 
 {% include busuanzi_statistics.html %}
 
@@ -24,6 +24,8 @@ One new version is released in **January 18th, 2022**.
 {% include components/intro.md %}
 
 OpenWALAS program suit  contains the functions of automatic meshing of ship hulls, cut-off hull mesh, straight beam modal analysis, characteristic calculation of transverse section, as well as 3D model display and 2D curve drawing. The software suit contains the GUI program OpenWALAS and five non-GUI core programs: OpenWALAS_PRE, OpenWALAS_FSCM, OpenWALAS_TDGF, OpenWALAS _IORM and OpenWALAS _TIME_RESP.
+
+![main-UI](picture\frame diagram.png)
 
 - OpenWALAS_PRE program for pre-processing, is mainly used to calculate the mode of wetted floating structures from dry modal informtions, in which the structural FEM model is 3D FEM model or beam model.
 - 3D calculation and analysis function in time domain: OpenWALAS_TDGF (time domain green's function method, called 'TDGF') and OpenWALAS_IORM（Inner and outer regions matching of Rankine source, called 'IORM') are the core program. The hydrodynamic coefficients are mainly calculated, including impulse response function of radiation forces, impulse response function of diffraction exciting forces, impulse response function of incident exciting forces, impulse response function of sectional wave loads, etc.
