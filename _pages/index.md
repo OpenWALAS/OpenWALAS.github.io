@@ -11,7 +11,7 @@ title: Welcome to OpenWALAS
   <meta name="baidu-site-verification" content="Ivf7ppggHc" />
   <title>My title</title>
 </head>
-One new version is released in **January 22th, 2022**.
+One new version is released in **January 22nd, 2022**.
 
 {% include busuanzi_statistics.html %}
 
@@ -64,25 +64,12 @@ Here's some [examples](https://github.com/OpenWALAS/OpenWALAS.github.io/tree/mas
 
 ## Licensing & Copyright
 
-OpenWALAS is distributed under the terms of the [GNU General Public License](http://www.gnu.org/licenses/gpl.html) (GPL).
-
-- Some answers to common questions about the license:
-
-  -  *If I write an application which uses OpenWALAS, am I forced to distribute that application?*
-     No. The license gives you the option to distribute your application if you want to. You do not have to exercise this option in the license.
-  -  *If I wanted to distribute an application which uses OpenWALAS, what license would I need to use?*
-     The GNU General Public License (GPL).
-
-- The bottom line for commercial users:
-
-  - *OpenWALAS can be used internally ('in-house') without restriction, but only redistributed in other software that is under the GNU GPL*.
-
 The author always respects the intellectual property rights and labor achievements, and supports the behavior of sharing software and related documents. Any organization and individual can freely share the program and related documentation within a limited scope, but the following principles should be followed.
 
 - (a) The projects encourage relevant researchers and authors to carry out joint-research, utilize this program, and further improve the program, so as to contribute to the technology development of global ship and ocean engineering;
 - (b) Copyrights of the software and documentation belongs to the original author;
-- (c) This program shall not be used for any commercial purpose without the permission of the original author, otherwise it will be deemed as infringement;
-- (d) The source and the original author must be cited, if the software and the contents of this document are reprinted;
+- (c) This program shall not be used for **any commercial purpose without the permission of the original author**, otherwise it will be deemed as infringement;
+- (d) The source and the original author must be cited, if the software and the contents of this document are reprinted. We sincerely hope that you will respect the intellectual copyright. Please **quote this program or this website reasonably, correctly and truly in the public papers or reports using this program**;
 - (e) For those who do not abide by this statement or illegally use this software and the contents of this document, the rights are reserved according to law.
 
 作者一贯尊重知识产权和劳动成果，并支持分享软件和相关文档的行为，在有限范围内可自由分享本程序和相关文档，但需遵循以下原则：
@@ -90,8 +77,8 @@ The author always respects the intellectual property rights and labor achievemen
 - *1、鼓励相关科研人员与作者开展联合研究，发挥本程序作用，并进一步完善程序，为全球船舶与海洋工程技术发展做贡献;*
 - *2、程序和文档的版权归原作者所有；*
 - *3、未经原作者允许不得将本程序用于**任何商业目的**，否则将视为侵权；*
-- *4、转载或者引用本程序和本文内容请**注明来源及原作者**；*
-- *5、对于不遵守此声明或者其他违法使用本程序和本文内容者，本人依法保留追究权等.*
+- *4、转载或者引用本程序和本文内容请**注明来源及原作者**。真切希望大家尊重知识版权，在使用到本程序的公开论文或报告中请合理、正确、真实引用本程序或本网站。*
+- *5、对于不遵守此声明或者其他违法使用本程序和本文内容者，本人依法保留追究权等。*
 
 ## Release History
 
