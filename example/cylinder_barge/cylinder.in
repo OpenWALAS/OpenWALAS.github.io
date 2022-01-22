@@ -1,0 +1,35 @@
+JOB WALAS
+"cylinder_nodeElement.wet"
+"cylinder_nodeElement.dry"
+"cylinder_node.modal"
+"cylinder_element.modal"
+"cylinder_element.dudx"
+"cylinder_nodeElement_free.wet"
+"cylinder_nodeElement_control.wet"
+"cylinder_slmParam.ini"
+95.8            0           1           -1           1           0           0           -3          3.0           0.1        
+0                 0           -0.1          
+2.1572e+11       2.1572e+11   4.3144e+11   0           0           0           
+0           0           0           0
+0           1025        9.81        
+0           100.0
+0           41 
+0.1        1.1
+1           7           
+0           30          60          90         120    150
+180         
+200         
+0           0           0           
+0           1
+0.00           0.00           0.00           0.00           0.00           0.00           
+0
+0  -1
+SPRING
+0
+1e3    1e3   0.   0.   0.   1e5
+RUDDER-PID
+0
+180.  -50.0    7.0   3.0    3.0    -0.0   -3.0   
+SECOND-ORDER-FORCE
+1           0           0           
+0           0    

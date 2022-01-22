@@ -1,0 +1,35 @@
+JOB WALAS
+"barge_nodeElement.wet"
+"barge_nodeElement.dry"
+"barge_node.modal"
+"barge_element.modal"
+"barge_element.dudx"
+"barge_nodeElement_free.wet"
+"barge_nodeElement_control.wet"
+"barge_slmParam.ini"
+109.7            0           1           -1           1           0           0           -3          3.0           0.1        
+0                 0           -0.2          
+3.1610e+11       3.1403e+11   6.3013e+11   0           0           0           
+0           0           0           0
+0           1025        9.81        
+0           100.0
+0           41
+0.1       1.1         
+1           7           
+0           30          60          90         120    150
+180     
+200         
+0           0           0           
+0           1
+0.00           0.00           0.00           0.00           0.00           0.00           
+0
+0  -1
+SPRING
+0
+1e3    1e3   0.   0.   0.   1e5
+RUDDER-PID
+0
+180.  -50.0    7.0   3.0    3.0    -0.0   -3.0
+SECOND-ORDER-FORCE
+1           0           0           
+0           0       
