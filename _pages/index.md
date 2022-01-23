@@ -11,7 +11,7 @@ title: Welcome to OpenWALAS
   <meta name="baidu-site-verification" content="Ivf7ppggHc" />
   <title>My title</title>
 </head>
-One new version is released in **January 22nd, 2022**.
+One new version is released in **January 23rd, 2022**.
 
 {% include busuanzi_statistics.html %}
 
@@ -19,13 +19,23 @@ One new version is released in **January 22nd, 2022**.
 
 ![main-UI](picture\main-UI.png)
 
+*Fig. 1 Main GUI*
+
 ![multi-model](picture\multi-model.png)
+
+*Fig. 2 Two Vessels*
 
 {% include components/intro.md %}
 
 OpenWALAS program suit  contains the functions of automatic meshing of ship hulls, cut-off hull mesh, straight beam modal analysis, characteristic calculation of transverse section, as well as 3D model display and 2D curve drawing. The software suit contains the GUI program OpenWALAS and five non-GUI core programs: OpenWALAS_PRE, OpenWALAS_FSCM, OpenWALAS_TDGF, OpenWALAS _IORM and OpenWALAS _TIME_RESP. The modules of OpenWALAS_MOOR and OpenWALAS_BLADE are developing, and will be released as soon as possible. The module OpenWALAS_MOOR is to consider complex mooring systems, and the module OpenWALAS_BLADE is to assess aerodynamic performances and elastic vibrations of blades of floating offshore wind turbine.
 
-![main-UI](picture\frame diagram.png)
+![frame-diagram](picture\frame diagram.png)
+
+*Fig. 3 Frame diagram of OpenWALAS*
+
+![design-draft-FOWT](picture\design draft of FOWT (Ma et al., 2019).png)
+
+*Fig. 4 Design draft of FOWT (Floating Offshore Wind Turbine) (Ma et al., 2019)*
 
 - OpenWALAS_PRE program for pre-processing, is mainly used to calculate the mode of wetted floating structures from dry modal informtions, in which the structural FEM model is 3D FEM model or beam model.
 - 3D calculation and analysis function in time domain: OpenWALAS_TDGF (time domain green's function method, called 'TDGF') and OpenWALAS_IORM（Inner and outer regions matching of Rankine source, called 'IORM') are the core program. The hydrodynamic coefficients are mainly calculated, including impulse response function of radiation forces, impulse response function of diffraction exciting forces, impulse response function of incident exciting forces, impulse response function of sectional wave loads, etc.
