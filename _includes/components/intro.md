@@ -2,5 +2,5 @@ OpenWALAS (***Open*** ***Wa***ve ***L***oad ***A***nalysis ***S***oftware) is a 
 
 The project of OpenWALAS,  maintained by Dr. Peng Yang on <a href="https://github.com/OpenWALAS/OpenWALAS.github.io">GitHub</a> and built originally for Yang’s own research, intends to supply a suit of free (not opensource) software to scientists and engineers all over the world.  
 
-Everyone can freely use the software for scientific research and academic activities, but the software must be cited in the published papers. If it is to be used for commercial purposes, it is recommended to purchase genuine software from developers.
+Everyone can freely use the software for scientific research and academic activities, but the software must be cited in the published papers or reports. If it is to be used for commercial purposes, it is recommended to purchase genuine software from developers.
 
