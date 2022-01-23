@@ -23,7 +23,7 @@ One new version is released in **January 22nd, 2022**.
 
 {% include components/intro.md %}
 
-OpenWALAS program suit  contains the functions of automatic meshing of ship hulls, cut-off hull mesh, straight beam modal analysis, characteristic calculation of transverse section, as well as 3D model display and 2D curve drawing. The software suit contains the GUI program OpenWALAS and five non-GUI core programs: OpenWALAS_PRE, OpenWALAS_FSCM, OpenWALAS_TDGF, OpenWALAS _IORM and OpenWALAS _TIME_RESP.
+OpenWALAS program suit  contains the functions of automatic meshing of ship hulls, cut-off hull mesh, straight beam modal analysis, characteristic calculation of transverse section, as well as 3D model display and 2D curve drawing. The software suit contains the GUI program OpenWALAS and five non-GUI core programs: OpenWALAS_PRE, OpenWALAS_FSCM, OpenWALAS_TDGF, OpenWALAS _IORM and OpenWALAS _TIME_RESP. The modules of OpenWALAS_MOOR and OpenWALAS_BLADE are developing, and will be released as soon as possible. The module OpenWALAS_MOOR is to consider complex mooring systems, and the module OpenWALAS_BLADE is to assess aerodynamic performances and elastic vibrations of blades of floating offshore wind turbine.
 
 ![main-UI](picture\frame diagram.png)
 
