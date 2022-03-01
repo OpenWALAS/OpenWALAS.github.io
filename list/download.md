@@ -12,7 +12,6 @@ show_profile: true
 
 -  Windows: 
 -  -  64bits [OpenWALAS](https://github.com/OpenWALAS/OpenWALAS.github.io/releases/download/V1.0.0/OpenWALAS1.0_X64_64BITS.exe)
--  -  32bits [OpenWALAS ](https://github.com/OpenWALAS/OpenWALAS.github.io/releases/download/V1.0.0/OpenWALAS1.0_X86_32BITS.exe)
 -  Linux: 
 -  -  64bits [OpenWALAS](https://github.com/OpenWALAS/OpenWALAS.github.io/releases/download/V1.0.0/OpenWALAS1.0_X64_64BITS.deb)
 -  [Other versions](https://github.com/OpenWALAS/OpenWALAS.github.io/releases)
