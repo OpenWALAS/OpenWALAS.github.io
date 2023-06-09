@@ -11,7 +11,7 @@ title: Welcome to OpenWALAS
   <meta name="baidu-site-verification" content="Ivf7ppggHc" />
   <title>My title</title>
 </head>
-One new version is released on May 26th, 2023.
+One new version is released on June 9th, 2023.
 
 {% include busuanzi_statistics.html %}
 
